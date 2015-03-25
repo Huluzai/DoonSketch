@@ -1,0 +1,96 @@
+## Makefile.am fragment sourced by src/Makefile.am.
+
+##if WITH_INKBOARD
+## inkboard_dialogs = \
+##	ui/dialog/whiteboard-connect.cpp	\
+##	ui/dialog/whiteboard-connect.h		\
+##	ui/dialog/whiteboard-sharewithchat.cpp	\
+##	ui/dialog/whiteboard-sharewithchat.h	\
+##	ui/dialog/whiteboard-sharewithuser.cpp	\
+##	ui/dialog/whiteboard-sharewithuser.h
+##endif
+
+ink_common_sources +=		\
+	ui/dialog/aboutbox.cpp			\
+	ui/dialog/aboutbox.h			\
+	ui/dialog/align-and-distribute.cpp	\
+	ui/dialog/align-and-distribute.h	\
+	ui/dialog/behavior.h			\
+	ui/dialog/calligraphic-profile-rename.h	\
+	ui/dialog/calligraphic-profile-rename.cpp	\
+	ui/dialog/color-item.cpp		\
+	ui/dialog/color-item.h			\
+	ui/dialog/debug.cpp			\
+	ui/dialog/debug.h			\
+	ui/dialog/desktop-tracker.cpp		\
+	ui/dialog/desktop-tracker.h		\
+	ui/dialog/dialog.cpp			\
+	ui/dialog/dialog.h			\
+	ui/dialog/dialog-manager.cpp		\
+	ui/dialog/dialog-manager.h		\
+	ui/dialog/dock-behavior.cpp		\
+	ui/dialog/dock-behavior.h		\
+	ui/dialog/document-metadata.cpp  	\
+	ui/dialog/document-metadata.h    	\
+	ui/dialog/document-properties.cpp	\
+	ui/dialog/document-properties.h		\
+	ui/dialog/extension-editor.cpp		\
+	ui/dialog/extension-editor.h		\
+	ui/dialog/extensions.cpp		\
+	ui/dialog/extensions.h			\
+	ui/dialog/filedialog.cpp		\
+	ui/dialog/filedialog.h			\
+	ui/dialog/filedialogimpl-gtkmm.cpp      \
+	ui/dialog/filedialogimpl-gtkmm.h        \
+	ui/dialog/filedialogimpl-win32.cpp	\
+	ui/dialog/filedialogimpl-win32.h	\
+	ui/dialog/fill-and-stroke.cpp		\
+	ui/dialog/fill-and-stroke.h		\
+	ui/dialog/filter-effects-dialog.cpp	\
+	ui/dialog/filter-effects-dialog.h	\
+	ui/dialog/find.cpp			\
+	ui/dialog/find.h			\
+	ui/dialog/floating-behavior.cpp		\
+	ui/dialog/floating-behavior.h		\
+	ui/dialog/glyphs.cpp			\
+	ui/dialog/glyphs.h			\
+	ui/dialog/guides.cpp			\
+	ui/dialog/guides.h			\
+	ui/dialog/icon-preview.cpp		\
+	ui/dialog/icon-preview.h		\
+	ui/dialog/inkscape-preferences.cpp	\
+	ui/dialog/inkscape-preferences.h	\
+	ui/dialog/input.cpp			\
+	ui/dialog/input.h			\
+	ui/dialog/layer-properties.cpp		\
+	ui/dialog/layer-properties.h		\
+	ui/dialog/layers.cpp			\
+	ui/dialog/layers.h			\
+	ui/dialog/livepatheffect-editor.cpp	\
+	ui/dialog/livepatheffect-editor.h	\
+	ui/dialog/memory.cpp			\
+	ui/dialog/memory.h			\
+	ui/dialog/messages.cpp			\
+	ui/dialog/messages.h			\
+	ui/dialog/ocaldialogs.cpp		\
+	ui/dialog/ocaldialogs.h			\
+	ui/dialog/panel-dialog.h		\
+	ui/dialog/print.cpp			\
+	ui/dialog/print.h			\
+	ui/dialog/print-colors-preview-dialog.cpp		\
+	ui/dialog/print-colors-preview-dialog.h		\
+	ui/dialog/scriptdialog.cpp		\
+	ui/dialog/scriptdialog.h		\
+	ui/dialog/svg-fonts-dialog.cpp		\
+	ui/dialog/svg-fonts-dialog.h		\
+	ui/dialog/swatches.cpp			\
+	ui/dialog/swatches.h			\
+	ui/dialog/tile.cpp			\
+	ui/dialog/tile.h			\
+	ui/dialog/tracedialog.cpp		\
+	ui/dialog/tracedialog.h			\
+	ui/dialog/transformation.cpp		\
+	ui/dialog/transformation.h		\
+	ui/dialog/undo-history.cpp		\
+	ui/dialog/undo-history.h		\
+	$(inkboard_dialogs)

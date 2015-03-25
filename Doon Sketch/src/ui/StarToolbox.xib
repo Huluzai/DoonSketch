@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="StarToolbox">
+            <connections>
+                <outlet property="inputCorners" destination="ghM-hF-dpT" id="wYF-XP-M4B"/>
+                <outlet property="inputRandomized" destination="kvU-gJ-Q1p" id="TCh-9g-jtv"/>
+                <outlet property="inputRounded" destination="8gh-Qh-0F0" id="yED-Fw-2Sj"/>
+                <outlet property="inputSpokeRatio" destination="378-au-c60" id="gn1-VW-ia8"/>
+                <outlet property="labelMode" destination="iSJ-MB-W5X" id="MyX-vA-boY"/>
+                <outlet property="segmentSidesFlat" destination="eZA-Ud-HUR" id="67V-qJ-pbg"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="631" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iSJ-MB-W5X">
+                    <rect key="frame" x="6" y="7" width="49" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Change:" id="euf-SU-AOm">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Le6-29-fZo">
+                    <rect key="frame" x="103" y="7" width="50" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Corners:" id="fet-JU-RkB">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byG-l9-BMF">
+                    <rect key="frame" x="185" y="7" width="69" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Spoke ratio:" id="DNF-4D-t8W">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aA0-QJ-SO8">
+                    <rect key="frame" x="310" y="7" width="56" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Rounded:" id="uxr-ZZ-fyL">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgY-W6-ZAE">
+                    <rect key="frame" x="416" y="7" width="74" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Randomized:" id="1E7-EM-H1J">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField toolTip="Number of Corners of a Polygon or Star" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ghM-hF-dpT">
+                    <rect key="frame" x="154" y="4" width="25" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="OvO-Po-U0N">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="10I-Vn-k1Q">
+                            <real key="minimum" value="3"/>
+                            <real key="maximum" value="1024"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didMagnitudeChanged:" target="-2" id="vGa-eb-OCB"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Base Radius to Tip Radius Ratio" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="378-au-c60">
+                    <rect key="frame" x="255" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="xkD-CJ-Wrj">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="PhG-kq-jC5">
+                            <real key="minimum" value="0.01"/>
+                            <real key="maximum" value="1"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didProportionChanged:" target="-2" id="zR6-gb-2Gi"/>
+                    </connections>
+                </textField>
+                <textField toolTip="How Much Rounded of Corners" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gh-Qh-0F0">
+                    <rect key="frame" x="364" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="9xP-VB-UaU">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="grN-qf-Xa4">
+                            <real key="minimum" value="-10"/>
+                            <real key="maximum" value="10"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didRoundedChanged:" target="-2" id="x7h-0k-t7h"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Scatter Randomly the Corners and Angles" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvU-gJ-Q1p">
+                    <rect key="frame" x="491" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="PnI-wb-uqH">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="iTr-RG-nUa">
+                            <real key="minimum" value="-10"/>
+                            <real key="maximum" value="10"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didRandomizedChanged:" target="-2" id="PvB-jk-6Ph"/>
+                    </connections>
+                </textField>
+                <button toolTip="Reset Parameters to Defaults" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Grp-MW-hwA">
+                    <rect key="frame" x="549" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="D" bezelStyle="roundedRect" image="20141220090057143_easyicon_net_600" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cpr-wQ-vKh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didResetDefaults:" target="-2" id="jkx-rq-0VJ"/>
+                    </connections>
+                </button>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eZA-Ud-HUR">
+                    <rect key="frame" x="57" y="4" width="46" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="Dlm-64-GB3">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Polygon" image="20141220085520459_easyicon_net_64" width="20"/>
+                            <segment toolTip="Star" image="20141220113303761_easyicon_net_598" width="19" selected="YES" tag="1"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didSidesflatChanged:" target="-2" id="aBn-tq-iU5"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <point key="canvasLocation" x="414.5" y="246"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="20141220085520459_easyicon_net_64" width="64" height="64"/>
+        <image name="20141220090057143_easyicon_net_600" width="600" height="600"/>
+        <image name="20141220113303761_easyicon_net_598" width="598" height="562"/>
+    </resources>
+</document>

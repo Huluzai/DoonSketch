@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>InkscapeCore.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>inkcore.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E159A71E1A4D7B9000E9857E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E159A7231A4D7BB800E9857E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E159AB811A4D7C6000E9857E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E159AB891A4D7DC700E9857E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E192F75619B007E3001806BB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1C5D1CB19C59FE400E059FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E1C5D1D019C5A0A200E059FA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

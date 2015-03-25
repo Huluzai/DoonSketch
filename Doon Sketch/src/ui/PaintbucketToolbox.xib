@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PaintbucketToolbox">
+            <connections>
+                <outlet property="buttonDefaults" destination="J3T-k1-bnK" id="RK7-Go-oTp"/>
+                <outlet property="inputOffset" destination="3A1-MH-7e9" id="vdM-Mh-WAe"/>
+                <outlet property="labelThreshold" destination="akf-Fg-K5O" id="Jdz-ZR-aHM"/>
+                <outlet property="popupAutoGap" destination="Mb5-aY-kc8" id="e34-vD-uls"/>
+                <outlet property="popupChannels" destination="xpm-SB-SaX" id="TDW-4q-vtK"/>
+                <outlet property="sliderThreshold" destination="9es-PH-7eV" id="FGM-T0-6jA"/>
+                <outlet property="view" destination="c22-O7-iKe" id="dah-AW-QBo"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="686" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WTa-3Y-zVd">
+                    <rect key="frame" x="5" y="6" width="40" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Fill By:" id="dkk-DO-Lqn">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton toolTip="Select Fill Channels" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpm-SB-SaX">
+                    <rect key="frame" x="46" y="2" width="101" height="22"/>
+                    <popUpButtonCell key="cell" type="push" title="Visible Colors" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="cff-8O-amx" id="4wE-ab-JG5">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" id="aR0-iq-fxv">
+                            <items>
+                                <menuItem title="Visible Colors" state="on" id="cff-8O-amx">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="Red" id="xZk-mg-FbO"/>
+                                <menuItem title="Green" id="zfC-9v-uVx"/>
+                                <menuItem title="Blue" id="WfO-Mu-fRu"/>
+                                <menuItem title="Hue" id="cJK-2T-ko3"/>
+                                <menuItem title="Saturation" id="Its-Wc-WSF"/>
+                                <menuItem title="Lightness" id="KbD-U2-TjR"/>
+                                <menuItem title="Alpha" id="Mcr-Sq-oYa"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="didChangeChannel:" target="-2" id="GqD-X0-9Qo"/>
+                    </connections>
+                </popUpButton>
+                <slider toolTip="The maximum allowed difference between the clicked pixel and the neighboring pixels to be counted in the fill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9es-PH-7eV">
+                    <rect key="frame" x="228" y="5" width="72" height="17"/>
+                    <sliderCell key="cell" controlSize="small" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="Vvt-1d-QyF"/>
+                    <connections>
+                        <action selector="didChangeThreshold:" target="-2" id="3Ds-qL-le2"/>
+                    </connections>
+                </slider>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akf-Fg-K5O">
+                    <rect key="frame" x="146" y="6" width="80" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Threshold:100" id="N9s-4v-j8I">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vnS-U2-hJz">
+                    <rect key="frame" x="302" y="6" width="88" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Grow/shrink by:" id="yfr-Kd-Kh2">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField toolTip="The amount to grow (positive) or shrink (negative) the created fill path" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3A1-MH-7e9">
+                    <rect key="frame" x="390" y="5" width="43" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0p8-a3-XiT">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="CY9-Zb-ico">
+                            <real key="minimum" value="-10000"/>
+                            <real key="maximum" value="10000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didChangeOffset:" target="-2" id="f5o-UC-aoE"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5gJ-vM-wNA">
+                    <rect key="frame" x="432" y="6" width="88" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Close Gaps:" id="gzs-Ez-U4k">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <popUpButton toolTip="Close gaps" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mb5-aY-kc8">
+                    <rect key="frame" x="505" y="2" width="76" height="22"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="sEr-QD-h4Q">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" id="KHb-B2-boh">
+                            <items>
+                                <menuItem title="None" id="gaD-ya-pIW"/>
+                                <menuItem title="Small" id="FWT-I4-Lez"/>
+                                <menuItem title="Medium" id="eZ5-7R-mEz"/>
+                                <menuItem title="Large" id="bZI-xO-eYf"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="didChangeAutoGap:" target="-2" id="aQ6-Rp-3sN"/>
+                    </connections>
+                </popUpButton>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-k1-bnK">
+                    <rect key="frame" x="585" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="D" bezelStyle="roundedRect" image="20141220090057143_easyicon_net_600" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="er5-az-tyS">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didResetDefaults:" target="-2" id="s1k-VL-afu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="488" y="170"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="20141220090057143_easyicon_net_600" width="600" height="600"/>
+    </resources>
+</document>

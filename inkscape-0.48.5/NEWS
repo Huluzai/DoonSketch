@@ -1,0 +1,18 @@
+Inkscape 0.48.5 is a stability and bugfix release. For a complete
+list of bugs fixed in this release, see the Launchpad milestone page:
+https://launchpad.net/inkscape/+milestone/0.48.5
+
+Important bugfixes
+
+  • Adobe Illustrator SVG files containing entities can be loaded again.
+  • Support for Poppler 0.26.
+  • Support for Boehm-GC 7.4.0 and later.
+  • Several crash bugs were fixed.
+  • 64-bit compilation is now possible on Windows.
+
+Known issues
+
+  • Not as awesome as 0.91.
+
+For information on prior releases, please see:
+    http://wiki.inkscape.org/wiki/index.php/Inkscape

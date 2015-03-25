@@ -1,0 +1,13 @@
+## Makefile.am fragment sourced by src/Makefile.am.
+
+ink_common_sources +=		\
+	ui/view/edit.h			\
+	ui/view/edit.cpp		\
+	ui/view/edit-widget.h		\
+	ui/view/edit-widget.cpp		\
+	ui/view/edit-widget-interface.h \
+	ui/view/view.h			\
+	ui/view/view.cpp		\
+	ui/view/view-widget.cpp \
+	ui/view/view-widget.h
+

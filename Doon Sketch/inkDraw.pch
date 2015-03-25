@@ -1,0 +1,22 @@
+//
+//  inkDraw.pch
+//  Inxcape
+//
+//  Created by 张 光建 on 14/11/13.
+//  Copyright (c) 2014年 Doonsoft. All rights reserved.
+//
+
+#ifndef Inxcape_inkDraw_pch
+#define Inxcape_inkDraw_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+#import <Cocoa/Cocoa.h>
+#endif
+
+#import "JssDebug.h"
+#import "define.h"
+
+#endif

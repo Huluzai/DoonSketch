@@ -1,0 +1,775 @@
+------------------------------------------------------------
+revno: 10038
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Mon 2014-06-09 19:57:47 +0200
+message:
+  Update NEWS file for Inkscape 0.48.5
+------------------------------------------------------------
+revno: 10037
+fixes bug: https://launchpad.net/bugs/1310802
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Mon 2014-06-09 15:46:39 +0200
+message:
+  Fix crash on deleting a selection that contains a layer.
+  Backport by ~suv.
+------------------------------------------------------------
+revno: 10036
+fixes bug: https://launchpad.net/bugs/1290573
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Mon 2014-06-09 15:43:30 +0200
+message:
+  Fix crash when undoing in specific circumstances.
+  Backport of fix for 1290573 applied in r13323 of trunk.
+------------------------------------------------------------
+revno: 10035
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Mon 2014-06-09 15:38:16 +0200
+message:
+  Replace Creative Commons 2.0 and 2.5 licenses with 3.0.
+  Backport of revision 12514 from trunk.
+------------------------------------------------------------
+revno: 10034
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Mon 2014-06-09 15:33:13 +0200
+message:
+  Remove obsolete Inkscape logo
+------------------------------------------------------------
+revno: 10033
+fixes bug: https://launchpad.net/bugs/1315142
+committer: Josh Andler <scislac@gmail.com>
+branch nick: 0.48.x
+timestamp: Tue 2014-06-03 08:44:09 -0700
+message:
+  Backported patch from comment 9. Fixes build with Poppler 0.26.
+------------------------------------------------------------
+revno: 10032
+fixes bug: https://launchpad.net/bugs/1323561
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Tue 2014-05-27 21:17:36 +0200
+message:
+  Shortcuts. Fix for bug #1323561 (Right handed ilustration file is incorrect).
+------------------------------------------------------------
+revno: 10031
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Sun 2014-05-18 21:07:27 +0200
+message:
+  fix final problems for win64 build. now it works!
+------------------------------------------------------------
+revno: 10030
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Sun 2014-05-18 20:57:30 +0200
+message:
+  several changes to make 64bit build work. (some reorderings of includes were needed because of annoying "#define interface" that windows.h does)
+------------------------------------------------------------
+revno: 10029
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Sun 2014-05-18 20:07:21 +0200
+message:
+  start to get win64 build working
+------------------------------------------------------------
+revno: 10028
+committer: Josh Andler <scislac@gmail.com>
+branch nick: 0.48.x
+timestamp: Sat 2014-05-17 21:57:03 -0700
+message:
+  Backport license change for extension: Scour is now dual-licensed Apache2 and GPL2. Ref. http://bazaar.launchpad.net/~scouring/scour/trunk/revision/222
+------------------------------------------------------------
+revno: 10027
+committer: Josh Andler <scislac@gmail.com>
+branch nick: 0.48.x
+timestamp: Fri 2014-05-16 21:11:58 -0700
+message:
+  Backport license change per 2013 license discussion and permission.
+------------------------------------------------------------
+revno: 10026
+fixes bug: https://launchpad.net/bugs/1264371
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Wed 2014-05-14 19:36:24 +0200
+message:
+  Fix for Bug #1264371 (Broken Link: Bug Page Not Found From Program Link).
+------------------------------------------------------------
+revno: 10025
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2014-04-10 01:40:30 +0200
+message:
+  Remove usage of deprecated function g_basename.
+------------------------------------------------------------
+revno: 10024
+author: David Mathog <mathog@caltech.edu>
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2014-04-10 01:39:23 +0200
+message:
+  Do not call gdk_window_process_updates.
+  Fixes crashes on Windows with certain versions of Cairo.
+  Patch from David Mathog.
+------------------------------------------------------------
+revno: 10023
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2014-04-10 01:33:26 +0200
+message:
+  Rename changelog for current release to "ChangeLog".
+  Fixes make distcheck.
+------------------------------------------------------------
+revno: 10022
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2014-04-10 01:00:53 +0200
+message:
+  Replace deprecated gdk_pixbuf_unref with g_object_unref
+------------------------------------------------------------
+revno: 10021
+fixes bug: https://launchpad.net/bugs/529843
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Tue 2014-04-08 23:36:02 +0200
+message:
+  Do not revert to "save as" when declining overwrite of existing file
+  while saving a copy. Backport of fix from Tomasz Boczkowski.
+------------------------------------------------------------
+revno: 10020
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2014-04-01 00:32:09 +0200
+message:
+  fix dumb mistake that inverted the logic in rev 10019
+------------------------------------------------------------
+revno: 10019
+fixes bug: https://launchpad.net/bugs/1293169
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Sun 2014-03-23 20:56:12 +0100
+message:
+  fix build for Xcode 5.1
+------------------------------------------------------------
+revno: 10018
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Tue 2014-03-18 12:45:34 +0100
+message:
+  Fixing gtk include.
+------------------------------------------------------------
+revno: 10017
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2014-03-13 01:31:54 +0100
+message:
+  pdfinput: fix two obvious errors in SvgBuilder (already fixed in trunk)
+------------------------------------------------------------
+revno: 10016
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2014-03-13 01:27:46 +0100
+message:
+  Backport better fix for LP #1283537 (grid lines not appearing in charts
+  imported from LibreOffice-produced PDFs)
+------------------------------------------------------------
+revno: 10015
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Sat 2014-03-08 16:19:17 +0100
+message:
+  Use default line width when it is set to 0 or negative in the PDF parser.
+  Fixes import of some LibreOffice PDFs.
+  Backport of fix for LP bug #1283537
+------------------------------------------------------------
+revno: 10014
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Sat 2014-03-08 16:13:46 +0100
+message:
+  Fix behavior of spray tool in single path mode.
+  Backport of the fix for LP bug #879058
+------------------------------------------------------------
+revno: 10013
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Sat 2014-03-08 15:50:22 +0100
+message:
+  Backport of a fix for LP bug #167390
+  Should prevent crash when loading a partially saved image.
+------------------------------------------------------------
+revno: 10012
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Fri 2014-02-28 04:26:15 +0100
+message:
+  Backport fix for LP #1198597
+------------------------------------------------------------
+revno: 10011
+fixes bug: https://launchpad.net/bugs/637034
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Wed 2014-02-19 08:06:16 +0100
+message:
+  Documentation. Changelog archive update (see Bug #637034).
+------------------------------------------------------------
+revno: 10010
+fixes bug: https://launchpad.net/bugs/1281028
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Mon 2014-02-17 10:38:30 +0100
+message:
+  Documentation. Changelog files updated (see Bug #1281028).
+------------------------------------------------------------
+revno: 10009
+fixes bug: https://launchpad.net/bugs/1163241
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Sun 2014-01-19 15:19:21 +0100
+message:
+  Backporting fix for Bug #1163241 (inkscape crashed with SIGSEGV in Inkscape::Preferences::_getNode()) by Kris.
+------------------------------------------------------------
+revno: 10008
+fixes bugs: https://launchpad.net/bugs/513083 https://launchpad.net/bugs/950781
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Sun 2014-01-19 15:16:18 +0100
+message:
+  Fix for bugs #513083 (no disk exception when opening SVG file on XP/AMD64) and #950781 (There is no disk in drive error when opening Inkscape in Windows 7) by Max Gaukler.
+------------------------------------------------------------
+revno: 10007
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Mon 2014-01-13 12:09:05 +0100
+message:
+  Backport fix for bug #1265072 (Inkscape 0.48.4 fails to compile with boehm-gc 7.4.0+)
+------------------------------------------------------------
+revno: 10006
+fixes bugs: https://launchpad.net/bugs/498141 https://launchpad.net/bugs/623640
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Fri 2013-12-13 09:55:54 +0100
+message:
+  Backporting fix for Bug #498141 (Crash on opening Inkscape Preferences... dialog (color profiles)).
+------------------------------------------------------------
+revno: 10005
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Thu 2013-12-12 14:45:52 +0100
+message:
+  Partial fix for Bug #1256347 (spiral and stars tools, the inputbox for turns and corners shows 3 after undo).
+------------------------------------------------------------
+revno: 10004
+fixes bug: https://launchpad.net/bugs/1255367
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Thu 2013-12-12 14:40:34 +0100
+message:
+  Fix for Bug #1255367 (Alt D clears undo history even when nothing happens).
+------------------------------------------------------------
+revno: 10003
+fixes bug: https://launchpad.net/bugs/1246763
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:25 +0100
+message:
+  Backport fix for bug #1246763 (segfault on importing from Open Clip Art Library)
+------------------------------------------------------------
+revno: 10002
+fixes bug: https://launchpad.net/bugs/1133033
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:24 +0100
+message:
+  Backport fix for bug #1133033 (Printing marks needs more precision)
+------------------------------------------------------------
+revno: 10001
+fixes bug: https://launchpad.net/bugs/1098283
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:24 +0100
+message:
+  Backport fix for bug #1098283 (Export DXF : closed path not working)
+------------------------------------------------------------
+revno: 10000
+fixes bug: https://launchpad.net/bugs/1089406
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:23 +0100
+message:
+  Backport fix for bug #1089406 (filter name is random "filter232" when first added)
+------------------------------------------------------------
+revno: 9999
+fixes bug: https://launchpad.net/bugs/1075438
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:23 +0100
+message:
+  Backport fix for bug #1075438 (Path outline fails to disappear)
+------------------------------------------------------------
+revno: 9998
+fixes bug: https://launchpad.net/bugs/1051017
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:19 +0100
+message:
+  Backport fix for bug #1051017 (inkscape crashed with SIGSEGV)
+------------------------------------------------------------
+revno: 9997
+fixes bug: https://launchpad.net/bugs/910335
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:19 +0100
+message:
+  Backport fix for bug #910335 ([POSIX] incorrect included header files in src/color-profile.cpp for open(2) )
+------------------------------------------------------------
+revno: 9996
+fixes bug: https://launchpad.net/bugs/710637
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:18 +0100
+message:
+  Backport fix for bug #710637 (Crash caused when node-editing empty path)
+------------------------------------------------------------
+revno: 9995
+fixes bug: https://launchpad.net/bugs/616198
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:17 +0100
+message:
+  Backport fix for bug #616198 (seg fault on opening my file)
+------------------------------------------------------------
+revno: 9994
+fixes bug: https://launchpad.net/bugs/525508
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:17 +0100
+message:
+  Backport fix for bug #525508 (When I Set Step rotation preferences to 22.5 degrees it increments by 22 degrees or something)
+------------------------------------------------------------
+revno: 9993
+fixes bug: https://launchpad.net/bugs/310206
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-12-10 13:44:16 +0100
+message:
+  Backport fix for bug #310206 (segfault when drawing closed path in sketch mode)
+------------------------------------------------------------
+revno: 9992
+fixes bug: https://launchpad.net/bugs/627943
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Tue 2013-12-10 11:58:29 +0100
+message:
+  Backporting fix for Bug #627943 (Unexpected RegistryTool message on Windows 7).
+------------------------------------------------------------
+revno: 9991
+fixes bug: https://launchpad.net/bugs/826027
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Tue 2013-12-10 11:21:09 +0100
+message:
+  Backporting fix for Bug #826027 (Preview calculated anyway in Open File dialog).
+------------------------------------------------------------
+revno: 9990
+fixes bug: https://launchpad.net/bugs/1136495
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-12-08 12:55:11 +0100
+message:
+  Backport fix for bug #1136495 (unit in flash display of node editor rotate wrong)
+------------------------------------------------------------
+revno: 9989
+committer: Kris <Kris.De.Gussem@hotmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Thu 2013-12-05 23:00:41 +0100
+message:
+  fix Segmentation fault while exporting to Plain SVG (Bug #1202753) (patch of Anshul Bhatnagar)
+------------------------------------------------------------
+revno: 9988
+fixes bug: https://launchpad.net/bugs/1255830
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sat 2013-11-30 11:32:24 +0100
+message:
+  Fix build with freetype >= 2.5.1
+------------------------------------------------------------
+revno: 9987
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Mon 2013-11-18 23:06:37 +0100
+message:
+  fix build for Fink and Mac OS X 10.9.
+------------------------------------------------------------
+revno: 9986
+fixes bug: https://launchpad.net/bugs/1252229
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Mon 2013-11-18 13:09:45 +0100
+message:
+  i18n. Fix for Bug #1252229 (As for the verb name XXX (No preferences), XXX are not localized.).
+------------------------------------------------------------
+revno: 9985
+fixes bug: https://launchpad.net/bugs/166371
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 22:51:07 +0100
+message:
+  backport of security fixes from trunk
+------------------------------------------------------------
+revno: 9984
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 22:25:55 +0100
+message:
+  fix C++11 compilation on Windows
+------------------------------------------------------------
+revno: 9983
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 22:02:00 +0100
+message:
+  part of patch by David Evans to fix build.  Should be fixed differently in trunk in my opinion, but here is ok ;)
+  Last part of the patch!
+------------------------------------------------------------
+revno: 9982
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:57:10 +0100
+message:
+  don't "help the compiler" here.
+  different fix than the patch by David Evans. this should fix the build too.
+------------------------------------------------------------
+revno: 9981
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:54:37 +0100
+message:
+  part of patch by David Evans to fix build. approve this change as this code is never actually reached. item constraints are not used in this version.
+------------------------------------------------------------
+revno: 9980
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:52:11 +0100
+message:
+  part of patch by David Evans to fix build
+  (src/ui/tool/node.h  --  gcc 4.6.1 (used on Windows) does not correctly set __cplusplus, but compilation does not fail, so OK )
+------------------------------------------------------------
+revno: 9979
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:41:28 +0100
+message:
+  part of patch by David Evans to fix build
+------------------------------------------------------------
+revno: 9978
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:38:53 +0100
+message:
+  part of patch by David Evans to fix build
+------------------------------------------------------------
+revno: 9977
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:37:51 +0100
+message:
+  part of patch by David Evans to fix build
+------------------------------------------------------------
+revno: 9976
+fixes bug: https://launchpad.net/bugs/1245722
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:33:51 +0100
+message:
+  apply part of patch by David Evans to fix compilation on OS X 10.9
+------------------------------------------------------------
+revno: 9975
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 21:02:50 +0100
+message:
+  fix prev commit
+------------------------------------------------------------
+revno: 9974
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Tue 2013-11-12 20:51:39 +0100
+message:
+  remove all throw declarions, they are obsolete
+------------------------------------------------------------
+revno: 9973
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Sun 2013-11-03 00:56:44 +0000
+message:
+  rm unused libvpsc/csolve_VPSC.*: These are breaking clang builds and have been deleted upstream
+------------------------------------------------------------
+revno: 9972
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Sun 2013-11-03 00:43:31 +0000
+message:
+  Fix OpenMP checking for clang builds
+------------------------------------------------------------
+revno: 9971
+fixes bug: https://launchpad.net/bugs/488035
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Fri 2013-10-04 17:59:42 +0200
+message:
+  Do not allow NULL _spcurve to be set in PathManipulator.
+  Fixes crasher bug #488035.
+------------------------------------------------------------
+revno: 9970
+committer: Krzysztof Kosiński <tweenk.pl@gmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Wed 2013-10-02 03:30:49 +0200
+message:
+  Fix segment welding in the node tool hanging when a two-point segment
+  and at least one additional point is selected. Fixes LP bug #710101.
+------------------------------------------------------------
+revno: 9969
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Wed 2013-09-25 13:01:32 +0200
+message:
+  Revert backport fix for bug #805238 (Crash when setting empty font family)
+  text tool in current trunk crashes on text with "font-family:;-inkscape-font-specification:;" in style attribute
+------------------------------------------------------------
+revno: 9968
+fixes bug: https://launchpad.net/bugs/629081
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Wed 2013-09-25 12:37:09 +0200
+message:
+  Backport fix for bug #629081 (Spiro and path operations fails)
+------------------------------------------------------------
+revno: 9967
+fixes bug: https://launchpad.net/bugs/561503
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Wed 2013-09-25 12:36:51 +0200
+message:
+  Backport fix for bug #561503 (Setting grid origin has no effect)
+------------------------------------------------------------
+revno: 9966
+fixes bugs: https://launchpad.net/bugs/360158 https://launchpad.net/bugs/1095288
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Wed 2013-09-25 12:36:41 +0200
+message:
+  Backport fix for bug #360158 ( Control points not drawn at (0,0))
+------------------------------------------------------------
+revno: 9965
+fixes bug: https://launchpad.net/bugs/898797
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Wed 2013-09-25 12:36:17 +0200
+message:
+  Backport fix for bug #898797 (Bend LPE incorrect on groups with objects which have a preserved transformation)
+------------------------------------------------------------
+revno: 9964
+fixes bug: https://launchpad.net/bugs/805238
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Tue 2013-09-24 19:14:52 +0200
+message:
+  Backport fix for bug #805238 (Crash when setting empty font family)
+------------------------------------------------------------
+revno: 9963
+fixes bug: https://launchpad.net/bugs/1219175
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 20:07:55 +0200
+message:
+  Backport fix for bug #1219175 (Typing in Layers Dialog searches hidden/unhidden state instead of layer name)
+------------------------------------------------------------
+revno: 9962
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 19:19:37 +0200
+message:
+  Backport fix for bug #1183206 (Redo Duplicate Layer Crashes Inkscape)
+------------------------------------------------------------
+revno: 9961
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 17:49:31 +0200
+message:
+  Backport fix for bug #966441 (inkscape crashed with SIGSEGV in sp_dtw_color_profile_event())
+------------------------------------------------------------
+revno: 9960
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Sun 2013-09-22 16:02:19 +0100
+message:
+  autogen.sh: Allow wider range of automake version
+------------------------------------------------------------
+revno: 9959
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 16:54:12 +0200
+message:
+  Backport fix for bug #1216859 (DXF export crashes on valid style attribute)
+------------------------------------------------------------
+revno: 9958
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 16:31:02 +0200
+message:
+  Backport fix for bug #1217602 (Measure Path fails with "XML too deep" error)
+------------------------------------------------------------
+revno: 9957
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 16:22:16 +0200
+message:
+  Backport fix for bug #166697 (Effects dirty document even when they do nothing)
+------------------------------------------------------------
+revno: 9956
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Sun 2013-09-22 11:13:11 +0100
+message:
+  Drop --export-dynamic linker flag and fix dynamic allocation
+------------------------------------------------------------
+revno: 9955
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Sun 2013-09-22 01:40:32 +0100
+message:
+  Fix dynamic allocation in inkscape-preferences dialog
+------------------------------------------------------------
+revno: 9954
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Sun 2013-09-22 01:34:02 +0100
+message:
+  Backport lp:inkscape r12203,r12213: Drop ancient gcc compiler check; allow clang build
+------------------------------------------------------------
+revno: 9953
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 01:54:18 +0200
+message:
+   Fix for bug #1171434 (INX <optiongroup> broken), reverts r9948
+------------------------------------------------------------
+revno: 9952
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 00:20:09 +0200
+message:
+  Backport fix for bug #1193025 (Fix format security errors)
+------------------------------------------------------------
+revno: 9951
+author: Niederstrasser
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2013-09-22 00:19:03 +0200
+message:
+  Backport fix for bug #992124 (Fix build failure with clang)
+  (includes fixes from r10360, r10399, r12202)
+------------------------------------------------------------
+revno: 9950
+fixes bug: https://launchpad.net/bugs/752457
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Fri 2013-06-21 15:32:50 +0200
+message:
+  Translations. Finnish translation fix by Ville Pätsi (see Bug #752457).
+------------------------------------------------------------
+revno: 9949
+fixes bug: https://launchpad.net/bugs/1177725
+author: Garret <garrettl@gmail.com>
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Wed 2013-05-08 18:37:42 +0200
+message:
+  Palettes: Add pure black and white to Tango palette (backported from trunk)
+------------------------------------------------------------
+revno: 9948
+committer: Johan B. C. Engelen <j.b.c.engelen@alumnus.utwente.nl>
+branch nick: 0.48.x
+timestamp: Sat 2013-04-06 15:57:38 +0200
+message:
+  fix bug where extension radiobutton parameters cannot be set from cmdline (e.g. "--export-area-drawing" did not work)
+------------------------------------------------------------
+revno: 9947
+committer: Diederik van Lierop <mail@diedenrezi.nl>
+branch nick: 0.48.x
+timestamp: Sun 2013-03-31 21:44:48 +0200
+message:
+  Backport of rev. 10984 from trunk: respect the "snap node closest to pointer" for large selections and don't use a convex hull of the snap points
+------------------------------------------------------------
+revno: 9946
+fixes bug: https://launchpad.net/bugs/1158787
+committer: Alex Valavanis <valavanisalex@gmail.com>
+branch nick: 0.48.x
+timestamp: Fri 2013-03-22 16:16:31 +0000
+message:
+  Add explicit configuration check for pangoft2
+------------------------------------------------------------
+revno: 9945
+committer: Kris <Kris.De.Gussem@hotmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Sat 2013-01-26 21:19:17 +0100
+message:
+  fix warning in Dutch translation
+------------------------------------------------------------
+revno: 9944
+committer: Kris <Kris.De.Gussem@hotmail.com>
+branch nick: RELEASE_0_48_BRANCH
+timestamp: Sat 2013-01-26 21:11:15 +0100
+message:
+  Backport fix of bug 996695 (Memory leak in bitmap trace)
+------------------------------------------------------------
+revno: 9943
+committer: JazzyNico <nicoduf@yahoo.fr>
+branch nick: 0.48.x
+timestamp: Sat 2013-01-05 15:34:09 +0100
+message:
+  Build. Backporting fix for Bug #1095364 (FTBFS with gcc 4.8).
+------------------------------------------------------------
+revno: 9942
+committer: Josh Andler <scislac@gmail.com>
+branch nick: 0.48.x
+timestamp: Thu 2013-01-03 21:16:23 -0800
+message:
+  Re-add omitted UI pref from prefences dialog rewrite
+------------------------------------------------------------
+revno: 9941
+author: Diederik van Lierop
+committer: ~suv <suv-sf@users.sourceforge.net>
+branch nick: inkscape-0.48.x
+timestamp: Sun 2012-12-30 17:06:48 +0100
+message:
+  Fix for bug #1093739 (snapping regression)
+------------------------------------------------------------
+revno: 9940 [merge]
+committer: Ted Gould <ted@gould.cx>
+branch nick: 0.48.x
+timestamp: Mon 2012-12-17 09:52:27 -0600
+message:
+  Fix that missed my pulling of the branch
+------------------------------------------------------------
+revno: 9939
+tags: INKSCAPE_0_48_4
+committer: Ted Gould <ted@gould.cx>
+branch nick: 0.48.x
+timestamp: Sat 2012-12-15 10:55:58 -0600
+message:
+  0.48.4
+------------------------------------------------------------
+Use --include-merged or -n0 to see merged revisions.

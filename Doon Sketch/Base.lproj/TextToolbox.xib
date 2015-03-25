@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="TextToolbox">
+            <connections>
+                <outlet property="buttonVerticalOrHorizontal" destination="8gS-54-cfN" id="bmo-By-Lti"/>
+                <outlet property="comboSizes" destination="nq8-CL-sKz" id="Q4g-EL-2E0"/>
+                <outlet property="inputLineSpace" destination="kWx-5S-ZLc" id="Xjo-fE-lfx"/>
+                <outlet property="inputRotation" destination="9SM-Xh-Cnk" id="CmX-jY-7BL"/>
+                <outlet property="inputVerticalShift" destination="Y5v-Y6-Kqb" id="a2a-Mk-XMy"/>
+                <outlet property="inputWordSpace" destination="5QZ-BD-JP2" id="Wde-ws-4M8"/>
+                <outlet property="inputletterSapce" destination="jhd-Dr-fhO" id="Fq4-AY-jQx"/>
+                <outlet property="popupFamilys" destination="f4V-4p-b0e" id="Ndj-SX-1Tc"/>
+                <outlet property="segmentAlign" destination="aiF-gP-KDf" id="5rI-8h-jNi"/>
+                <outlet property="segmentScript" destination="Kke-f5-Db1" id="nEi-8h-uhx"/>
+                <outlet property="segmentStyle" destination="ij3-r1-T8A" id="SlF-BH-pS1"/>
+                <outlet property="view" destination="c22-O7-iKe" id="3uK-4S-Ldp"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="741" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <popUpButton toolTip="Select Font Family" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f4V-4p-b0e">
+                    <rect key="frame" x="4" y="2" width="153" height="22"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="jeO-Qj-ecf">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" id="L2w-pR-hFJ"/>
+                    </popUpButtonCell>
+                    <connections>
+                        <binding destination="-2" name="selectedValue" keyPath="self.zStyle.fontFamily" id="qIb-h3-Wkx"/>
+                    </connections>
+                </popUpButton>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ij3-r1-T8A">
+                    <rect key="frame" x="210" y="4" width="61" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectAny" id="00V-hL-hUI">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Bold" image="2014122012454730_easyicon_net_128" width="27">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Italic" image="20141220124511760_easyicon_net_128" width="27" selected="YES" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didChangeStyle:" target="-2" id="nSP-km-qZm"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aiF-gP-KDf">
+                    <rect key="frame" x="275" y="4" width="69" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="YBg-M9-L7y">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Align Left" image="20141220094045652_easyicon_net_269" width="15">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Align Center" image="20141220094055820_easyicon_net_269" width="15" selected="YES" tag="2">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Align Right" image="20141220094130127_easyicon_net_269" width="15" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Align Justify" image="20141220094050113_easyicon_net_269" width="15" tag="3">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <binding destination="-2" name="selectedTag" keyPath="self.zStyle.textAlign" id="31D-CX-WeW"/>
+                    </connections>
+                </segmentedControl>
+                <comboBox toolTip="Font size" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq8-CL-sKz">
+                    <rect key="frame" x="162" y="2" width="47" height="22"/>
+                    <comboBoxCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" title="40" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="Up1-Mz-1rI">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        <objectValues>
+                            <string>40</string>
+                            <string>14</string>
+                            <string>18</string>
+                            <string>4</string>
+                            <string>6</string>
+                            <string>8</string>
+                            <string>9</string>
+                            <string>10</string>
+                            <string>11</string>
+                            <string>12</string>
+                            <string>13</string>
+                        </objectValues>
+                    </comboBoxCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.fontSize" id="mNM-je-QYR"/>
+                    </connections>
+                </comboBox>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kke-f5-Db1">
+                    <rect key="frame" x="346" y="4" width="45" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectAny" id="91m-9h-pee">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Superscript" image="20141220094728163_easyicon_net_256" width="19">
+                                <nil key="label"/>
+                            </segment>
+                            <segment image="20141220094743489_easyicon_net_256" width="19" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didChangeScript:" target="-2" id="QiN-2x-qnW"/>
+                    </connections>
+                </segmentedControl>
+                <textField toolTip="Space Between Lines" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWx-5S-ZLc">
+                    <rect key="frame" x="398" y="10" width="42" height="16"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="kHc-0S-QKk">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Aqn-Re-OYd"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.lineHeight" id="pvY-DC-cAv"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Space Between Letters" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jhd-Dr-fhO">
+                    <rect key="frame" x="445" y="10" width="42" height="16"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="TzU-Ng-FD6">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="nEf-b0-qZh"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.wordSpacing" id="TuB-b7-4aH"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Space Between Words" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QZ-BD-JP2">
+                    <rect key="frame" x="491" y="10" width="42" height="16"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JKP-qU-lz7">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="k5F-oq-cGn"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.letterSpacing" id="NMZ-Hv-9oN"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Horizontal Kerning" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5v-Y6-Kqb">
+                    <rect key="frame" x="538" y="10" width="42" height="16"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Qug-Wn-6SC">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="tfh-gV-vOZ"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.verticalShift" id="fAz-gD-Fhd"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Vertical Shift" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9SM-Xh-Cnk">
+                    <rect key="frame" x="584" y="10" width="42" height="16"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Fkd-ir-2Ak">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="li4-d3-V73"/>
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.horizontalShift" id="Iuo-1I-m15"/>
+                    </connections>
+                </textField>
+                <textField toolTip="Character Direction" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9Z-A7-nln">
+                    <rect key="frame" x="630" y="10" width="42" height="16"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="LQC-iY-THa">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="OLf-c5-rdf">
+                            <real key="minimum" value="-180"/>
+                            <real key="maximum" value="180"/>
+                            <metadata>
+                                <real key="inspectorSampleValue" value="1"/>
+                            </metadata>
+                        </numberFormatter>
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.characterRotation" id="hDK-LL-quT"/>
+                    </connections>
+                </textField>
+                <button toolTip="Text Orientation" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gS-54-cfN">
+                    <rect key="frame" x="677" y="6" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="Vertical" bezelStyle="roundedRect" image="2014122012282988_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LUu-c9-nVD">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.zStyle.textOrientation" id="omp-70-sYp"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kcl-JS-Kih">
+                    <rect key="frame" x="403" y="0.0" width="32" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Lines" id="6Bd-KB-DkX">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FNE-z8-mSq">
+                    <rect key="frame" x="447" y="0.0" width="39" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Letters" id="TCZ-te-TZN">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YOx-I2-Q86">
+                    <rect key="frame" x="494" y="0.0" width="36" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Words" id="TOy-6e-IOn">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCX-aC-fYn">
+                    <rect key="frame" x="538" y="0.0" width="43" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Kerning" id="vHH-ks-aiw">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pTU-NC-ygo">
+                    <rect key="frame" x="591" y="0.0" width="29" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Shift" id="pjP-Nt-9yz">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRw-yv-VST">
+                    <rect key="frame" x="627" y="0.0" width="48" height="11"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Direction" id="VAH-YI-dUQ">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="458.5" y="102"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="zBD-yZ-VUj"/>
+    </objects>
+    <resources>
+        <image name="20141220094045652_easyicon_net_269" width="269" height="202"/>
+        <image name="20141220094050113_easyicon_net_269" width="269" height="202"/>
+        <image name="20141220094055820_easyicon_net_269" width="269" height="202"/>
+        <image name="20141220094130127_easyicon_net_269" width="269" height="202"/>
+        <image name="20141220094728163_easyicon_net_256" width="192" height="192"/>
+        <image name="20141220094743489_easyicon_net_256" width="192" height="192"/>
+        <image name="2014122012282988_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124511760_easyicon_net_128" width="128" height="128"/>
+        <image name="2014122012454730_easyicon_net_128" width="128" height="128"/>
+    </resources>
+</document>

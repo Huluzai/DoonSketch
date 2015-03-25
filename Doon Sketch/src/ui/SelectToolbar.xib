@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SelectToolbar">
+            <connections>
+                <outlet property="buttonDeselect" destination="jIa-HO-hzs" id="DwA-l9-TpN"/>
+                <outlet property="buttonFlipHorizontal" destination="hl5-S3-W58" id="rd2-YR-72g"/>
+                <outlet property="buttonFlipVertical" destination="ZYr-fF-pzt" id="bSo-Kg-mcu"/>
+                <outlet property="buttonLock" destination="UJ6-zw-8Nw" id="cw9-R1-uTU"/>
+                <outlet property="buttonRotate90CCW" destination="jxF-Cv-ByN" id="UPT-Ah-9oS"/>
+                <outlet property="buttonRotate90CW" destination="FRS-Ns-Fmk" id="GBm-Fk-xPY"/>
+                <outlet property="buttonSelectAll" destination="gvY-eN-2RA" id="xvx-FP-5Ba"/>
+                <outlet property="buttonSelectAllInAllLayers" destination="0qN-JE-U61" id="SNc-uu-gUV"/>
+                <outlet property="buttonSelectionLower" destination="IGA-fD-PFS" id="9pD-Uc-P3K"/>
+                <outlet property="buttonSelectionRaise" destination="mJL-7x-cSY" id="IMv-iT-rAF"/>
+                <outlet property="buttonSelectionToBack" destination="o1G-dC-BRi" id="p7F-hA-3mC"/>
+                <outlet property="buttonSelectionToFront" destination="dgf-SK-1Uo" id="aMB-jj-fCF"/>
+                <outlet property="inputHeight" destination="JS3-9G-78x" id="gPE-hS-lnd"/>
+                <outlet property="inputWidth" destination="Akb-t6-ayw" id="FZV-1t-LJl"/>
+                <outlet property="inputX" destination="u9U-Ua-heE" id="lry-nv-WNZ"/>
+                <outlet property="inputY" destination="kY8-uI-JN4" id="taJ-fI-OoA"/>
+                <outlet property="segmentAffect" destination="tbf-ov-5fc" id="doI-lS-AtU"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="767" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button hidden="YES" toolTip="Select all in all layers" verticalHuggingPriority="750" fixedFrame="YES" tag="46" translatesAutoresizingMaskIntoConstraints="NO" id="0qN-JE-U61">
+                    <rect key="frame" x="25" y="-1" width="22" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="a" alternateTitle="Select All in All Layers" bezelStyle="roundedRect" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vaa-Vo-ptO">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="tZB-6U-Wt9"/>
+                    </connections>
+                </button>
+                <button toolTip="Delete Select" verticalHuggingPriority="750" fixedFrame="YES" tag="51" translatesAutoresizingMaskIntoConstraints="NO" id="jIa-HO-hzs">
+                    <rect key="frame" x="33" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="D" bezelStyle="roundedRect" image="2014122012421256_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kdk-Au-6wN">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="llT-Fu-Phd"/>
+                    </connections>
+                </button>
+                <button toolTip="Rotate 90" verticalHuggingPriority="750" fixedFrame="YES" tag="98" translatesAutoresizingMaskIntoConstraints="NO" id="jxF-Cv-ByN">
+                    <rect key="frame" x="67" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="R" bezelStyle="roundedRect" image="20141220124151666_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bDh-eT-wER">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="8Ej-wM-eTy"/>
+                    </connections>
+                </button>
+                <button toolTip="Rotate 90 Clockwise" verticalHuggingPriority="750" fixedFrame="YES" tag="99" translatesAutoresizingMaskIntoConstraints="NO" id="FRS-Ns-Fmk">
+                    <rect key="frame" x="95" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="r" bezelStyle="roundedRect" image="20141220124147843_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cNp-m1-pfV">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="iGf-VY-VXW"/>
+                    </connections>
+                </button>
+                <button toolTip="Flip horizontal" verticalHuggingPriority="750" fixedFrame="YES" tag="105" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-S3-W58">
+                    <rect key="frame" x="123" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="F" bezelStyle="roundedRect" image="20141220122750108_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="K9E-Fp-c9k">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="nMY-JZ-DGp"/>
+                    </connections>
+                </button>
+                <button toolTip="Flip vertical" verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="ZYr-fF-pzt">
+                    <rect key="frame" x="151" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="f" bezelStyle="roundedRect" image="20141220122757461_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="br3-TF-SYz">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="vOl-m1-Efp"/>
+                    </connections>
+                </button>
+                <button toolTip="Selection To Front" verticalHuggingPriority="750" fixedFrame="YES" tag="54" translatesAutoresizingMaskIntoConstraints="NO" id="IGA-fD-PFS">
+                    <rect key="frame" x="185" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="L" bezelStyle="roundedRect" image="20141220123034745_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ucu-fQ-urn">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="7Ql-gL-sR0"/>
+                    </connections>
+                </button>
+                <button toolTip="Selection To Back" verticalHuggingPriority="750" fixedFrame="YES" tag="55" translatesAutoresizingMaskIntoConstraints="NO" id="o1G-dC-BRi">
+                    <rect key="frame" x="213" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="l" bezelStyle="roundedRect" image="20141220123257268_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jCP-Ym-s2X">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="wbm-Fh-jMC"/>
+                    </connections>
+                </button>
+                <button toolTip="Selection Raise" verticalHuggingPriority="750" fixedFrame="YES" tag="56" translatesAutoresizingMaskIntoConstraints="NO" id="mJL-7x-cSY">
+                    <rect key="frame" x="241" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="R" bezelStyle="roundedRect" image="20141220123038303_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iU4-Rm-yNe">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="hjw-js-qas"/>
+                    </connections>
+                </button>
+                <button toolTip="Selection Lower" verticalHuggingPriority="750" fixedFrame="YES" tag="57" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-SK-1Uo">
+                    <rect key="frame" x="269" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="r" bezelStyle="roundedRect" image="20141220123253216_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="spP-9x-rbR">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="ExI-de-8X8"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cdy-6G-4MA">
+                    <rect key="frame" x="306" y="6" width="13" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="X" id="vrJ-ve-C34">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9U-Ua-heE">
+                    <rect key="frame" x="321" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="CZG-SG-JCk">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="0ku-kC-aZF">
+                            <real key="minimum" value="-1000000"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didChangeAnyValue:" target="-2" id="mVB-IX-yZ5"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HwB-Ai-cyX">
+                    <rect key="frame" x="373" y="6" width="13" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Y" id="cvD-8N-U5q">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kY8-uI-JN4">
+                    <rect key="frame" x="388" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="Brx-cT-pQ8">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="8vC-fn-TP0">
+                            <real key="minimum" value="-1000000"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didChangeAnyValue:" target="-2" id="luW-Zt-qZ5"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G3q-qV-ef3">
+                    <rect key="frame" x="439" y="6" width="15" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="W" id="27n-7U-0lY">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Akb-t6-ayw">
+                    <rect key="frame" x="454" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="R6i-VB-bWa">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="3dn-NP-xI2">
+                            <real key="minimum" value="0.0"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didChangeAnyValue:" target="-2" id="mr2-lH-cs8"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBv-ns-ccg">
+                    <rect key="frame" x="533" y="6" width="13" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="H" id="whq-Hm-Vvv">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JS3-9G-78x">
+                    <rect key="frame" x="548" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="0u7-T9-McA">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Ceq-hY-rT5">
+                            <real key="minimum" value="0.0"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didChangeAnyValue:" target="-2" id="NAJ-zZ-MbH"/>
+                    </connections>
+                </textField>
+                <popUpButton hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dvH-n1-171">
+                    <rect key="frame" x="603" y="2" width="67" height="22"/>
+                    <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="jN5-KX-z1c" id="Boz-iX-6TT">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" id="y5t-ZH-1e6">
+                            <items>
+                                <menuItem title="Item 1" state="on" id="jN5-KX-z1c"/>
+                                <menuItem title="Item 2" id="t4O-h3-Ehd"/>
+                                <menuItem title="Item 3" id="Arc-8U-zl7"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHP-EO-JRa">
+                    <rect key="frame" x="603" y="7" width="35" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Affect" id="K8B-Xo-RfW">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tbf-ov-5fc">
+                    <rect key="frame" x="637" y="5" width="113" height="18"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="roundRect" trackingMode="selectAny" id="Coo-po-emt">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Stroke" image="20141220124019869_easyicon_net_128">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Rect Corners" image="20141220124046836_easyicon_net_128" selected="YES" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Gradient" image="20141220124117970_easyicon_net_128">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Pattern" image="20141220124015415_easyicon_net_128">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didChangeAffect:" target="-2" id="mPC-g7-Gqn"/>
+                    </connections>
+                </segmentedControl>
+                <button toolTip="Flip vertical" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UJ6-zw-8Nw">
+                    <rect key="frame" x="506" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="L" bezelStyle="roundedRect" image="20141220113354871_easyicon_net_512" imagePosition="only" alignment="center" alternateImage="20141220113358358_easyicon_net_512" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="q0u-Ea-b5u">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                </button>
+                <button toolTip="Select all" verticalHuggingPriority="750" fixedFrame="YES" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="gvY-eN-2RA">
+                    <rect key="frame" x="5" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="A" alternateTitle="Select All" bezelStyle="roundedRect" image="20141220113126851_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1aS-Au-Yoh">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="AMX-Wq-yUW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="805.5" y="234"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="20141220113126851_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220113354871_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="20141220113358358_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="20141220122750108_easyicon_net_512" width="20.803611755371094" height="20.803611755371094"/>
+        <image name="20141220122757461_easyicon_net_512" width="20.803611755371094" height="20.803611755371094"/>
+        <image name="20141220123034745_easyicon_net_512" width="512" height="512"/>
+        <image name="20141220123038303_easyicon_net_512" width="512" height="512"/>
+        <image name="20141220123253216_easyicon_net_512" width="512" height="512"/>
+        <image name="20141220123257268_easyicon_net_512" width="512" height="512"/>
+        <image name="20141220124015415_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124019869_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124046836_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124117970_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124147843_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124151666_easyicon_net_128" width="128" height="128"/>
+        <image name="2014122012421256_easyicon_net_128" width="128" height="128"/>
+    </resources>
+</document>

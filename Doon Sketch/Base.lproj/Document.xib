@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Document">
+            <connections>
+                <outlet property="ec" destination="ciX-8e-dZb" id="Hea-9u-g5E"/>
+                <outlet property="itemsPanel" destination="IEf-95-Yh6" id="IXm-rt-gb2"/>
+                <outlet property="matrixTools" destination="vkD-23-aAB" id="CId-xC-33z"/>
+                <outlet property="nudeView" destination="9cU-iW-iJh" id="Gpd-sj-t1s"/>
+                <outlet property="scrollView" destination="9cU-iW-iJh" id="pnQ-Or-kZI"/>
+                <outlet property="stylesPagesMgr" destination="vU9-qR-C7c" id="Emx-cL-7wf"/>
+                <outlet property="testPanel" destination="EoR-Ie-L7B" id="nxM-V1-a9i"/>
+                <outlet property="testView" destination="pmt-iG-beG" id="na7-Dd-cGn"/>
+                <outlet property="toolbarPlace" destination="Z76-dm-ell" id="eLd-Qv-INz"/>
+                <outlet property="window" destination="Q09-a5-idb" id="drX-Oh-UB6"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Inkscape" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Document Window" animationBehavior="default" id="Q09-a5-idb" userLabel="Window 2">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="133" y="235" width="726" height="533"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <value key="minSize" type="size" width="300" height="200"/>
+            <view key="contentView" id="dZB-kz-uFe">
+                <rect key="frame" x="0.0" y="0.0" width="726" height="533"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="Nif-zq-bTU">
+                        <rect key="frame" x="507" y="0.0" width="219" height="505"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
+                        <clipView key="contentView" id="2HQ-YS-2tk">
+                            <rect key="frame" x="1" y="1" width="166" height="79"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view id="wUE-mU-Lz7">
+                                    <rect key="frame" x="0.0" y="0.0" width="166" height="79"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                </view>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="cvH-BX-dYx">
+                            <rect key="frame" x="1" y="80" width="166" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="gZB-AK-gYX">
+                            <rect key="frame" x="167" y="1" width="15" height="79"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <customView id="Z76-dm-ell">
+                        <rect key="frame" x="0.0" y="505" width="726" height="28"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    </customView>
+                    <customView id="9cU-iW-iJh" customClass="CanvasScrollView">
+                        <rect key="frame" x="189" y="0.0" width="318" height="505"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </customView>
+                    <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" id="vkD-23-aAB">
+                        <rect key="frame" x="3" y="45" width="40" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        <size key="cellSize" width="40" height="40"/>
+                        <size key="intercellSpacing" width="2" height="2"/>
+                        <buttonCell key="prototype" type="bevel" title="Sel" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" borderStyle="border" tag="113" inset="2" id="5CH-lf-QDN">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <cells>
+                            <column>
+                                <buttonCell type="bevel" title="Sel" bezelStyle="regularSquare" image="20141220113332729_easyicon_net_512" imagePosition="left" alignment="left" state="on" borderStyle="border" tag="1" imageScaling="proportionallyDown" inset="2" id="9j1-Ow-sIY">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="aVR-SO-c6w"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Node" bezelStyle="regularSquare" image="20141220113142413_easyicon_net_512" imagePosition="left" alignment="left" borderStyle="border" tag="2" imageScaling="proportionallyDown" inset="2" id="hcX-oY-fDC">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="jNL-Mr-13l"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Pen" bezelStyle="regularSquare" image="20141220113426674_easyicon_net_512" imagePosition="left" alignment="left" borderStyle="border" tag="11" imageScaling="proportionallyDown" inset="2" id="vCH-K5-VAF">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="s9i-bp-vd5"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Rectangle" bezelStyle="regularSquare" image="2014122011321890_easyicon_net_600" imagePosition="left" alignment="left" borderStyle="border" tag="5" imageScaling="proportionallyDown" inset="2" id="nEq-GU-bg0">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="mGD-8t-gCp"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Arc" bezelStyle="regularSquare" image="ellipse-xxl" imagePosition="left" alignment="left" borderStyle="border" tag="7" imageScaling="proportionallyDown" inset="2" id="h37-9V-ycj">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="3Oo-mO-cvG"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Star" bezelStyle="regularSquare" image="20141220113303761_easyicon_net_598" imagePosition="left" alignment="left" borderStyle="border" tag="8" imageScaling="proportionallyDown" inset="2" id="xOx-Yw-eAI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="msn-7J-cRg"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Sprial" bezelStyle="regularSquare" image="20141220113318217_easyicon_net_512" imagePosition="left" alignment="left" borderStyle="border" tag="9" imageScaling="proportionallyDown" inset="2" id="pLH-5O-gO9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="39n-CB-xQ3"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Pencil" bezelStyle="regularSquare" image="20141220113034875_easyicon_net_800" imagePosition="left" alignment="left" borderStyle="border" tag="10" imageScaling="proportionallyDown" inset="2" id="vUq-G5-dxB">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="4G4-IR-SsC"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Calligraphy" bezelStyle="regularSquare" image="2014122011343280_easyicon_net_512" imagePosition="left" alignment="left" borderStyle="border" tag="12" imageScaling="proportionallyDown" inset="2" id="hbR-4c-Utt">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="Q7H-NV-ge4"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Text" bezelStyle="regularSquare" image="20141220113115508_easyicon_net_256" imagePosition="left" alignment="left" borderStyle="border" tag="13" imageScaling="proportionallyDown" inset="2" id="3Ec-La-eh8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="Jfn-Ev-Ikx"/>
+                                    </connections>
+                                </buttonCell>
+                                <buttonCell type="bevel" title="Paintbucket" bezelStyle="regularSquare" image="20141220113453628_easyicon_net_512" imagePosition="left" alignment="left" borderStyle="border" tag="18" imageScaling="proportionallyDown" inset="2" id="SXs-Vh-lPM">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="didSwitchTools:" target="-2" id="VWn-yK-g7E"/>
+                                    </connections>
+                                </buttonCell>
+                            </column>
+                        </cells>
+                    </matrix>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="22" horizontalPageScroll="10" verticalLineScroll="22" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="e1N-bh-ONj">
+                        <rect key="frame" x="42" y="0.0" width="147" height="505"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                        <clipView key="contentView" drawsBackground="NO" id="R2e-eB-IVb">
+                            <rect key="frame" x="1" y="0.0" width="238" height="134"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <outlineView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" alternatingRowBackgroundColors="YES" columnReordering="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" headerView="eGz-E8-MGP" indentationPerLevel="14" outlineTableColumn="IYj-az-Eb5" id="gjH-IF-zWd" customClass="ObjectsView">
+                                    <rect key="frame" x="0.0" y="0.0" width="119" height="22"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="0.0"/>
+                                    <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn width="116" minWidth="40" maxWidth="1000" id="IYj-az-Eb5">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="NGQ-2W-DHH">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="IEf-95-Yh6" id="lNV-9e-GoK"/>
+                                        <outlet property="delegate" destination="IEf-95-Yh6" id="0re-dg-TRm"/>
+                                    </connections>
+                                </outlineView>
+                            </subviews>
+                            <nil key="backgroundColor"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="ArV-CC-S9x">
+                            <rect key="frame" x="1" y="119" width="223" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="aCK-VC-MNv">
+                            <rect key="frame" x="224" y="17" width="15" height="102"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="eGz-E8-MGP">
+                            <rect key="frame" x="0.0" y="0.0" width="10000" height="17"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableHeaderView>
+                    </scrollView>
+                </subviews>
+            </view>
+            <toolbar key="toolbar" implicitIdentifier="C7F982FF-9CE9-40B6-A69C-D81AFA779CD3" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="ntA-TN-qrc">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="RoC-Fa-oKD"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="cHg-G2-6e0"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="Ffq-02-6Dj"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="kkT-yb-yJG"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="vw9-Yg-vDi"/>
+                    <toolbarItem implicitItemIdentifier="115EAD8D-3F05-41D3-83D9-BA0A580F29F4" label="Export PNG" paletteLabel="Export" toolTip="Export this Document as a PNG Image" tag="12" image="20141220111901670_easyicon_net_128" id="Bu4-8f-DIf">
+                        <connections>
+                            <action selector="exportBitmap:" target="-2" id="NsK-5O-SCZ"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="35920BF1-3B90-4618-B582-E737E96CA7DB" label="Duplicate" paletteLabel="Duplicate" toolTip="Duplicate Selected Objects" tag="35" image="duplicate" id="ikq-E5-YML">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="Hff-Ye-bxK"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6E0805A3-4530-4902-9FA2-EDA10354BB65" label="Clone" paletteLabel="Clone" toolTip="Create a Clone" tag="36" image="clone" id="iTU-Aw-Deg">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="ZYX-ep-l2q"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C1AD46CA-A99C-46B7-925E-CF683658EF76" label="Standalong" paletteLabel="Standalong" toolTip="Cut the Selected Clones' Links to the Originals', Turning Them into Standlong Objects" tag="37" image="standlone" id="zP9-cJ-IiM">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="L61-zB-9XP"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C1F8F675-ED91-4E37-9279-64F373E965F8" label="Zoom Page" paletteLabel="Zoom Page" toolTip="Zoom to Fit Page In Window" tag="176" image="zoom_page" id="gZh-8h-1aH">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="4Kc-gn-GmL"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="C3A22118-2E1B-4953-8836-5214DA92F08E" label="Zoom Selection" paletteLabel="Zoom Selection" toolTip="Zoom to Fit Selection in Window" tag="179" image="zoom_selection" id="gao-w6-y7I">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="eSI-U0-ork"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="370978A4-7565-42B1-8C5C-70D0FD73C8E9" label="Zoom Drawing" paletteLabel="Zoom Drawing" toolTip="Zoom to Fit Drawing in Window" tag="178" image="zoom_drawing" id="f8c-bQ-h0o">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="qRI-X5-ykK"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="1E71B020-8385-47C6-A990-0C13A596C5EC" label="Group" paletteLabel="Group" toolTip="Group Selected Objects" tag="58" image="group" id="8Qx-yt-6VG">
+                        <connections>
+                            <action selector="performVerb:" target="-2" id="3Jf-3h-JU7"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="6D450748-B87C-4344-A181-B0F0DC513C6F" label="Ungroup" paletteLabel="Ungroup" toolTip="Ungroup Selected Objects" tag="59" image="ungroup" id="Cn1-6x-OXH">
+                        <connections>
+                            <action selector="ungroup:" target="-2" id="luu-3K-lFL"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="480B546E-0351-4DEA-8DE2-188BC67859F7" label="Difference" paletteLabel="Difference" tag="-1" image="difference" id="Bsb-Vb-qiK">
+                        <connections>
+                            <action selector="diffOp:" target="-1" id="7Ko-LW-Ufn"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="A5848869-428A-43C2-8CAD-26202572206B" label="Union" paletteLabel="Union" tag="-1" image="union" id="yge-kd-SMB">
+                        <connections>
+                            <action selector="unionOp:" target="-1" id="JXw-mI-Xn9"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="5C8901B5-58ED-4ED4-8E6D-36FA99332ECB" label="Substract" paletteLabel="Substract" tag="-1" image="substract" id="LrB-X0-pWu">
+                        <connections>
+                            <action selector="substractOp:" target="-1" id="E7i-eY-BwS"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="9821E43F-2868-40B9-A0B4-FB694BEE10DE" label="Intersection" paletteLabel="Intersection" tag="-1" image="intersect" id="GKe-4c-av8">
+                        <connections>
+                            <action selector="intersectOp:" target="-1" id="kMd-rv-6OP"/>
+                        </connections>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="Bsb-Vb-qiK"/>
+                    <toolbarItem reference="GKe-4c-av8"/>
+                    <toolbarItem reference="yge-kd-SMB"/>
+                    <toolbarItem reference="LrB-X0-pWu"/>
+                    <toolbarItem reference="kkT-yb-yJG"/>
+                    <toolbarItem reference="ikq-E5-YML"/>
+                    <toolbarItem reference="iTU-Aw-Deg"/>
+                    <toolbarItem reference="zP9-cJ-IiM"/>
+                    <toolbarItem reference="kkT-yb-yJG"/>
+                    <toolbarItem reference="8Qx-yt-6VG"/>
+                    <toolbarItem reference="Cn1-6x-OXH"/>
+                    <toolbarItem reference="kkT-yb-yJG"/>
+                    <toolbarItem reference="gZh-8h-1aH"/>
+                    <toolbarItem reference="gao-w6-y7I"/>
+                    <toolbarItem reference="f8c-bQ-h0o"/>
+                    <toolbarItem reference="vw9-Yg-vDi"/>
+                    <toolbarItem reference="Bu4-8f-DIf"/>
+                </defaultToolbarItems>
+            </toolbar>
+            <connections>
+                <outlet property="delegate" destination="-2" id="XNp-kE-2aA"/>
+            </connections>
+            <point key="canvasLocation" x="570" y="397.5"/>
+        </window>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="EoR-Ie-L7B" userLabel="Test Panel" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES" fullSizeContentView="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="120" y="64" width="276" height="378"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="tDE-A1-kIo">
+                <rect key="frame" x="7" y="11" width="276" height="378"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <point key="canvasLocation" x="-56" y="-115"/>
+        </window>
+        <splitView dividerStyle="thin" vertical="YES" id="0LE-5E-KGB">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="404"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView id="pmt-iG-beG" userLabel="Left">
+                    <rect key="frame" x="0.0" y="0.0" width="152" height="404"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <button id="v9p-kp-60G">
+                            <rect key="frame" x="11" y="128" width="131" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="bevel" title="Random Scroll" bezelStyle="regularSquare" imagePosition="left" alignment="left" borderStyle="border" inset="2" id="BoL-kc-2wW">
+                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="randomScrollTest:" target="-2" id="fwP-1R-kSL"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" id="e7z-S2-6Eg">
+                            <rect key="frame" x="7" y="198" width="104" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <buttonCell key="cell" type="push" title="Test Panel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="UoV-UY-QPj">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="showTestPanel:" target="-2" id="ryM-sp-kze"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </customView>
+                <customView id="Sh4-09-QII" userLabel="Right">
+                    <rect key="frame" x="153" y="0.0" width="356" height="404"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <subviews>
+                        <view id="YWX-wu-4EA" customClass="CocoaCanvasView">
+                            <rect key="frame" x="9" y="81" width="338" height="46"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        </view>
+                    </subviews>
+                </customView>
+            </subviews>
+            <holdingPriorities>
+                <real value="250"/>
+                <real value="250"/>
+            </holdingPriorities>
+            <point key="canvasLocation" x="60.5" y="408"/>
+        </splitView>
+        <viewController id="vU9-qR-C7c" userLabel="Style Pages Manager" customClass="StylePagesManager">
+            <connections>
+                <outlet property="view" destination="wUE-mU-Lz7" id="qdU-W2-m3r"/>
+            </connections>
+        </viewController>
+        <window title="Export " allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" oneShot="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="fHd-cd-SQi" userLabel="Export Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="262" height="123"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="s7k-kO-6yF">
+                <rect key="frame" x="0.0" y="1" width="262" height="123"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressIndicator maxValue="100" style="bar" id="8gT-tS-GRH">
+                        <rect key="frame" x="20" y="57" width="222" height="20"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Fzv-i1-VSM">
+                        <rect key="frame" x="18" y="84" width="226" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Exporting..." id="boz-y2-ajw">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <button verticalHuggingPriority="750" id="tV2-v6-WyX">
+                        <rect key="frame" x="90" y="18" width="83" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="roundTextured" title="Cancel" bezelStyle="texturedRounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Gre-6N-x89">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancel:" target="ciX-8e-dZb" id="Z1A-4I-rHk"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="-25" y="57.5"/>
+        </window>
+        <customView id="Hzg-N7-sHJ" userLabel="Export Option View">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ZDQ-We-c7V">
+                    <rect key="frame" x="94" y="5" width="40" height="11"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Width" id="AP9-xg-Z8r">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="S0M-CP-rwh">
+                    <rect key="frame" x="172" y="5" width="45" height="11"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Height" id="WYh-M9-BLi">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="jIW-wa-jop">
+                    <rect key="frame" x="167" y="16" width="55" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="xyP-7R-dzw">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="c2A-h6-r6S">
+                            <real key="minimum" value="1"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="ciX-8e-dZb" name="value" keyPath="self.height" id="QB3-Ks-1Sq"/>
+                    </connections>
+                </textField>
+                <textField verticalHuggingPriority="750" id="iqv-tu-ta4">
+                    <rect key="frame" x="87" y="16" width="55" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="Z4w-Je-iSA">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="S30-CN-sqs">
+                            <real key="minimum" value="1"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="ciX-8e-dZb" name="value" keyPath="self.width" id="zl0-bT-ld0"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="z9h-tz-O1X">
+                    <rect key="frame" x="9" y="45" width="90" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Export Option" id="1gU-3s-7wD">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="CSy-aJ-NZb">
+                    <rect key="frame" x="148" y="19" width="12" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="x" id="QUv-Tg-Myj">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="iyO-x4-M1Y">
+                    <rect key="frame" x="-2" y="20" width="82" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Bitmap Size:" id="uLy-5P-NsR">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="Odv-B6-RD8">
+                    <rect key="frame" x="230" y="20" width="31" height="14"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="DPI:" id="d89-UD-hjh">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" id="ujc-x7-AeV">
+                    <rect key="frame" x="268" y="16" width="55" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="UEF-p9-HGT">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="ZXv-GM-fr3">
+                            <real key="minimum" value="0.01"/>
+                            <real key="maximum" value="100000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="ciX-8e-dZb" name="value" keyPath="self.dpi" id="4cO-KR-p22"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="216.5" y="317.5"/>
+        </customView>
+        <customObject id="ciX-8e-dZb" customClass="ExportController">
+            <connections>
+                <outlet property="labelProgMsg" destination="Fzv-i1-VSM" id="uW4-n8-7QJ"/>
+                <outlet property="proExport" destination="8gT-tS-GRH" id="dBw-Om-bOu"/>
+                <outlet property="viewOption" destination="Hzg-N7-sHJ" id="eYu-fs-8Wr"/>
+                <outlet property="window" destination="fHd-cd-SQi" id="cGw-K1-yQU"/>
+            </connections>
+        </customObject>
+        <customObject id="IEf-95-Yh6" customClass="ItemsPanel">
+            <connections>
+                <outlet property="outlineView" destination="gjH-IF-zWd" id="4gF-NK-VyA"/>
+            </connections>
+        </customObject>
+        <userDefaultsController representsSharedInstance="YES" id="6O9-Xd-ieS"/>
+        <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="NRP-l5-kOS">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="505"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <clipView key="contentView" id="EYH-KE-gu8" customClass="CanvasClipView">
+                <rect key="frame" x="1" y="1" width="166" height="79"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view id="bTa-Vv-sAA" customClass="CocoaCanvasView">
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="79"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            </clipView>
+            <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="tem-i9-lXv">
+                <rect key="frame" x="1" y="80" width="166" height="15"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="8uO-c3-32m">
+                <rect key="frame" x="167" y="1" width="15" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </scroller>
+            <connections>
+                <outlet property="nextKeyView" destination="dZB-kz-uFe" id="UGw-qG-ezr"/>
+            </connections>
+            <point key="canvasLocation" x="184" y="1084.5"/>
+        </scrollView>
+    </objects>
+    <resources>
+        <image name="20141220111901670_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220113034875_easyicon_net_800" width="800" height="802"/>
+        <image name="20141220113115508_easyicon_net_256" width="256" height="256"/>
+        <image name="20141220113142413_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="2014122011321890_easyicon_net_600" width="600" height="600"/>
+        <image name="20141220113303761_easyicon_net_598" width="598" height="562"/>
+        <image name="20141220113318217_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="20141220113332729_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="20141220113426674_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="2014122011343280_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="20141220113453628_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="clone" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="difference" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="duplicate" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="ellipse-xxl" width="256" height="256"/>
+        <image name="group" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="intersect" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="standlone" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="substract" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="ungroup" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="union" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="zoom_drawing" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="zoom_page" width="819.20001220703125" height="819.20001220703125"/>
+        <image name="zoom_selection" width="819.20001220703125" height="819.20001220703125"/>
+    </resources>
+</document>

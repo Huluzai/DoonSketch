@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GradientEditor">
+            <connections>
+                <outlet property="buttonAddStop" destination="iEw-M1-wub" id="kIr-mY-Z5S"/>
+                <outlet property="buttonDelStop" destination="cxI-DG-VFR" id="7eI-zf-C9m"/>
+                <outlet property="colorStop" destination="z5b-uB-dFb" id="Qsn-DL-Ipz"/>
+                <outlet property="imagePreview" destination="rKO-cW-tzd" id="V1f-0A-5EP"/>
+                <outlet property="inputOffset" destination="LbY-ZG-pGe" id="ms8-LE-v84"/>
+                <outlet property="popupStops" destination="yPD-du-xAm" id="uq6-02-hOf"/>
+                <outlet property="sliderOffset" destination="FU7-Yr-ECv" id="Ilf-pd-n2D"/>
+                <outlet property="window" destination="nQd-zn-dCU" id="3OG-O7-0JD"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Gradient Editor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="Gradient Editor" animationBehavior="default" id="nQd-zn-dCU" customClass="NSPanel">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
+            <rect key="contentRect" x="486" y="304" width="220" height="180"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+            <view key="contentView" id="Skx-02-tCF">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iEw-M1-wub">
+                        <rect key="frame" x="5" y="81" width="98" height="32"/>
+                        <buttonCell key="cell" type="push" title="Add Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pgJ-Ch-iT4">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="didAddStop:" target="-2" id="dFw-TH-DrG"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cxI-DG-VFR">
+                        <rect key="frame" x="103" y="81" width="113" height="32"/>
+                        <buttonCell key="cell" type="push" title="Delete Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3hf-Ao-TLu">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="didDeleteStop:" target="-2" id="H64-Iz-gde"/>
+                        </connections>
+                    </button>
+                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FU7-Yr-ECv">
+                        <rect key="frame" x="61" y="41" width="96" height="21"/>
+                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="0.69999999999999996" tickMarkPosition="above" sliderType="linear" id="728-bp-fTI"/>
+                        <connections>
+                            <binding destination="-2" name="value" keyPath="self.offset" id="Yi8-Ds-yaR">
+                                <dictionary key="options">
+                                    <bool key="NSConditionallySetsEnabled" value="NO"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrJ-bn-eNz">
+                        <rect key="frame" x="9" y="43" width="42" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Offset" id="700-G9-69s">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LbY-ZG-pGe">
+                        <rect key="frame" x="163" y="43" width="47" height="22"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ifm-vn-dww">
+                            <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="gaZ-14-Q7y">
+                                <metadata>
+                                    <real key="inspectorSampleValue" value="1.2333449999999999"/>
+                                </metadata>
+                            </numberFormatter>
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="-2" name="value" keyPath="self.offset" id="UFS-Zq-avA">
+                                <dictionary key="options">
+                                    <bool key="NSConditionallySetsEditable" value="NO"/>
+                                </dictionary>
+                            </binding>
+                        </connections>
+                    </textField>
+                    <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5b-uB-dFb">
+                        <rect key="frame" x="156" y="123" width="54" height="23"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <action selector="didChangeStopColor:" target="-2" id="Gnf-PI-x0V"/>
+                        </connections>
+                    </colorWell>
+                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rKO-cW-tzd">
+                        <rect key="frame" x="11" y="153" width="199" height="20"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="lwq-eR-ylN"/>
+                    </imageView>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPD-du-xAm">
+                        <rect key="frame" x="9" y="122" width="116" height="26"/>
+                        <popUpButtonCell key="cell" type="push" title="Gradient" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="o2k-Yl-0vw" id="IT7-xd-eFX">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="y4K-H5-Wjp">
+                                <items>
+                                    <menuItem title="Gradient" state="on" id="o2k-Yl-0vw"/>
+                                </items>
+                            </menu>
+                        </popUpButtonCell>
+                    </popUpButton>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="7bX-pa-SCM"/>
+            </connections>
+            <point key="canvasLocation" x="149" y="126"/>
+        </window>
+        <userDefaultsController representsSharedInstance="YES" id="mci-0J-Cup"/>
+    </objects>
+</document>

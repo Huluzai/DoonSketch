@@ -1,0 +1,21 @@
+## Makefile.am fragment sourced by src/Makefile.am.
+
+ink_common_sources +=	\
+	dialogs/clonetiler.cpp		\
+	dialogs/clonetiler.h		\
+	dialogs/dialog-events.cpp	\
+	dialogs/dialog-events.h		\
+	dialogs/export.cpp		\
+	dialogs/export.h		\
+	dialogs/find.cpp		\
+	dialogs/find.h			\
+	dialogs/item-properties.cpp	\
+	dialogs/item-properties.h	\
+	dialogs/object-attributes.cpp	\
+	dialogs/object-attributes.h	\
+	dialogs/spellcheck.cpp		\
+	dialogs/spellcheck.h		\
+	dialogs/text-edit.cpp		\
+	dialogs/text-edit.h		\
+	dialogs/xml-tree.cpp		\
+	dialogs/xml-tree.h

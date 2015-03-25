@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="PaintSelector">
+            <connections>
+                <outlet property="checkFillRule" destination="h3K-3r-mE8" id="MRN-OL-ivl"/>
+                <outlet property="linearContentView" destination="uUd-zc-2bx" id="GPH-HT-d2p"/>
+                <outlet property="modeColorPage" destination="hXs-ji-gdX" id="UPP-sx-KVr"/>
+                <outlet property="modeEmptyPage" destination="7EJ-Gx-8jp" id="08j-pi-yOc"/>
+                <outlet property="modeLinearPage" destination="qOt-YW-R6Z" id="Wfm-ZA-ipf"/>
+                <outlet property="modeMultiplePage" destination="oWv-2F-CGz" id="6YL-qO-a1D"/>
+                <outlet property="modeNonePage" destination="Ngr-U5-5Pg" id="IJ1-CB-bvB"/>
+                <outlet property="modePatternPage" destination="cCb-uV-iBg" id="eVa-Hq-BCN"/>
+                <outlet property="modePlace" destination="wCr-tw-Bji" id="pJF-9e-AK4"/>
+                <outlet property="modeRadialPage" destination="anm-aO-ZqK" id="51s-8s-OOo"/>
+                <outlet property="modeSwatchPage" destination="Lai-27-lcG" id="YT0-uE-MSr"/>
+                <outlet property="modeUnsetPage" destination="P2L-8N-Z5e" id="9TI-9S-rVz"/>
+                <outlet property="radialContentView" destination="hQZ-Gd-3ll" id="6q0-e0-9wk"/>
+                <outlet property="segmentModes" destination="OQb-uy-ItF" id="UDg-ZN-6IT"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="213" height="152"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OQb-uy-ItF">
+                    <rect key="frame" x="36" y="130" width="93" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="ack-Oi-Vhr">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="No Fill" image="2014122012465945_easyicon_net_128" width="20" tag="2">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Color" image="paint_color" width="20" selected="YES" tag="3">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Linear" image="paint_linear" width="20" tag="5">
+                                <nil key="label"/>
+                            </segment>
+                            <segment toolTip="Radial" image="paint_radial" width="24" tag="6">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didChangeModes:" target="-2" id="qd6-Ww-fqI"/>
+                    </connections>
+                </segmentedControl>
+                <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCr-tw-Bji">
+                    <rect key="frame" x="4" y="0.0" width="205" height="130"/>
+                </customView>
+                <button toolTip="holes" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3K-3r-mE8">
+                    <rect key="frame" x="174" y="125" width="39" height="28"/>
+                    <buttonCell key="cell" type="push" bezelStyle="rounded" image="20141220124222999_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hQm-uF-q7M">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didChangeFillRule:" target="-2" id="7C2-44-7mM"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mFM-2b-Cfq">
+                    <rect key="frame" x="4" y="133" width="38" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Mode" id="ZHJ-PW-NIK">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="132.5" y="136"/>
+        </customView>
+        <box autoresizesSubviews="NO" title="Radial gradient" borderType="line" titlePosition="belowTop" id="anm-aO-ZqK">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQZ-Gd-3ll">
+                        <rect key="frame" x="2" y="19" width="199" height="97"/>
+                    </customView>
+                </subviews>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="463.5" y="149"/>
+        </box>
+        <box autoresizesSubviews="NO" title="No paint" borderType="line" titlePosition="belowTop" id="Ngr-U5-5Pg">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="196.5" y="710"/>
+        </box>
+        <box autoresizesSubviews="NO" title="Flat Color" borderType="line" titlePosition="belowTop" id="hXs-ji-gdX">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IPs-zN-8js">
+                        <rect key="frame" x="7" y="83" width="80" height="17"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Select Color" id="Boy-MK-Fwa">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <colorWell fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6S-CC-jCY">
+                        <rect key="frame" x="106" y="81" width="44" height="23"/>
+                        <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <binding destination="-2" name="value" keyPath="self.uiColor" id="U34-7H-JIe"/>
+                        </connections>
+                    </colorWell>
+                </subviews>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="172.5" y="504"/>
+        </box>
+        <box autoresizesSubviews="NO" title="Linear gradient" borderType="line" titlePosition="belowTop" id="qOt-YW-R6Z">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uUd-zc-2bx">
+                        <rect key="frame" x="2" y="19" width="199" height="97"/>
+                    </customView>
+                </subviews>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="469.5" y="355"/>
+        </box>
+        <box autoresizesSubviews="NO" title="Swatch fill" borderType="line" titlePosition="belowTop" id="Lai-27-lcG">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIS-cH-OYa">
+                        <rect key="frame" x="16" y="80" width="172" height="26"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="4Wp-6v-Jgg">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="mfL-q7-tWd"/>
+                        </popUpButtonCell>
+                    </popUpButton>
+                </subviews>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="92.5" y="328"/>
+        </box>
+        <box autoresizesSubviews="NO" title="Pattern fill" borderType="line" titlePosition="belowTop" id="cCb-uV-iBg">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZY-VN-EaQ">
+                        <rect key="frame" x="16" y="80" width="172" height="26"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="dMC-CO-aoq">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="Nvk-cd-hkX"/>
+                        </popUpButtonCell>
+                    </popUpButton>
+                </subviews>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="469.5" y="558"/>
+        </box>
+        <box autoresizesSubviews="NO" title="Undefined" borderType="line" titlePosition="belowTop" id="P2L-8N-Z5e">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="469.5" y="752"/>
+        </box>
+        <userDefaultsController representsSharedInstance="YES" id="H3I-l7-trv"/>
+        <box autoresizesSubviews="NO" title="Not select" borderType="line" titlePosition="belowTop" id="7EJ-Gx-8jp">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="516.5" y="90"/>
+        </box>
+        <box autoresizesSubviews="NO" title="Multiple" borderType="line" titlePosition="belowTop" id="oWv-2F-CGz">
+            <rect key="frame" x="0.0" y="0.0" width="205" height="132"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView">
+                <rect key="frame" x="1" y="1" width="203" height="114"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            </view>
+            <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+            <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <point key="canvasLocation" x="392.5" y="-84"/>
+        </box>
+        <tabView controlSize="small" id="YsA-z0-tmB">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <tabViewItems>
+                <tabViewItem label="Tab" identifier="1" id="4dW-gw-gdJ">
+                    <view key="view" id="w0t-qj-gTn">
+                        <rect key="frame" x="10" y="25" width="157" height="86"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                </tabViewItem>
+                <tabViewItem label="View" identifier="2" id="K7U-3w-QFd">
+                    <view key="view" id="523-Gi-t0L">
+                        <rect key="frame" x="10" y="33" width="157" height="78"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </tabViewItem>
+            </tabViewItems>
+            <point key="canvasLocation" x="132.5" y="-76.5"/>
+        </tabView>
+    </objects>
+    <resources>
+        <image name="20141220124222999_easyicon_net_128" width="48" height="48"/>
+        <image name="2014122012465945_easyicon_net_128" width="48" height="48"/>
+        <image name="paint_color" width="64" height="64"/>
+        <image name="paint_linear" width="64" height="64"/>
+        <image name="paint_radial" width="64" height="64"/>
+    </resources>
+</document>

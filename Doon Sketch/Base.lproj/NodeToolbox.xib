@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NodeToolbox">
+            <connections>
+                <outlet property="checkLpeedit" destination="29Y-jf-nHv" id="1ZZ-pd-P9i"/>
+                <outlet property="inputX" destination="X4p-BU-Mjz" id="724-lX-ybZ"/>
+                <outlet property="inputY" destination="F5X-0B-s4L" id="ACA-XY-y3D"/>
+                <outlet property="segmentShowHandles" destination="FUh-M6-UpB" id="l5Y-xL-vue"/>
+                <outlet property="segmentShowPaths" destination="kAY-px-okp" id="O68-G2-xhC"/>
+                <outlet property="view" destination="djP-1H-gCD" id="cGN-Vh-fDr"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="djP-1H-gCD">
+            <rect key="frame" x="0.0" y="0.0" width="687" height="28"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button toolTip="Insert a Node" verticalHuggingPriority="750" fixedFrame="YES" tag="45" translatesAutoresizingMaskIntoConstraints="NO" id="sd4-h0-M2f">
+                    <rect key="frame" x="3" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="A" alternateTitle="Select All" bezelStyle="roundedRect" image="20141220124238241_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NNO-rT-Z6K">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonAdd:" target="-2" id="SCl-34-osj"/>
+                    </connections>
+                </button>
+                <button toolTip="Delete" verticalHuggingPriority="750" fixedFrame="YES" tag="46" translatesAutoresizingMaskIntoConstraints="NO" id="chf-nN-Zlv">
+                    <rect key="frame" x="30" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="a" alternateTitle="Select All in All Layers" bezelStyle="roundedRect" image="20141220124208388_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pkP-uw-GFY">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonDelete:" target="-2" id="r8P-H7-9JB"/>
+                    </connections>
+                </button>
+                <button toolTip="Join Selected Nodes" verticalHuggingPriority="750" fixedFrame="YES" tag="44" translatesAutoresizingMaskIntoConstraints="NO" id="DLy-qk-IxD">
+                    <rect key="frame" x="62" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="D" bezelStyle="roundedRect" image="20141220123756858_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Jdt-nZ-Csk">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonJoin:" target="-2" id="b0T-4I-sAP"/>
+                    </connections>
+                </button>
+                <button toolTip="Break Path at Selected Nodes" verticalHuggingPriority="750" fixedFrame="YES" tag="98" translatesAutoresizingMaskIntoConstraints="NO" id="2eC-sE-hVt">
+                    <rect key="frame" x="89" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="R" bezelStyle="roundedRect" image="20141220112957473_easyicon_net_285" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QqF-yv-SRy">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonBreak:" target="-2" id="yeh-ec-aAO"/>
+                    </connections>
+                </button>
+                <button toolTip="Join Selected Endnodes with a New Segment" verticalHuggingPriority="750" fixedFrame="YES" tag="99" translatesAutoresizingMaskIntoConstraints="NO" id="G18-kR-Wsa">
+                    <rect key="frame" x="120" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="r" bezelStyle="roundedRect" image="20141220124244924_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GMQ-i2-kXo">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonJoinSegment:" target="-2" id="v3n-pY-Smo"/>
+                    </connections>
+                </button>
+                <button toolTip="Delete Segment in Two Non-endpoint Nodes" verticalHuggingPriority="750" fixedFrame="YES" tag="105" translatesAutoresizingMaskIntoConstraints="NO" id="BSs-tj-IQ5">
+                    <rect key="frame" x="146" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="F" bezelStyle="roundedRect" image="20141220124204715_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9oV-nV-21G">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonDeleteSegment:" target="-2" id="COM-QN-rku"/>
+                    </connections>
+                </button>
+                <button toolTip="Make Selected Nodes Corner" verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="QTV-6E-0LX">
+                    <rect key="frame" x="179" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="f" bezelStyle="roundedRect" image="20141220124130899_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CKk-qH-727">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonCusp:" target="-2" id="k28-Ep-vD5"/>
+                    </connections>
+                </button>
+                <button toolTip="Make Selected Nodes Smooth" verticalHuggingPriority="750" fixedFrame="YES" tag="94" translatesAutoresizingMaskIntoConstraints="NO" id="dv5-7u-fzt">
+                    <rect key="frame" x="206" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="L" bezelStyle="roundedRect" image="20141220124301402_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bY9-zq-sas">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonSmooth:" target="-2" id="uO1-WX-9g6"/>
+                    </connections>
+                </button>
+                <button toolTip="Make Selected Nodes Symmetric" verticalHuggingPriority="750" fixedFrame="YES" tag="92" translatesAutoresizingMaskIntoConstraints="NO" id="gke-8h-OS4">
+                    <rect key="frame" x="233" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="l" bezelStyle="roundedRect" image="20141220124308845_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="qls-C5-AfX">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonSymmetrical:" target="-2" id="LbH-41-Lmv"/>
+                    </connections>
+                </button>
+                <button toolTip="Make Selected Ndoes Auto-smooth" verticalHuggingPriority="750" fixedFrame="YES" tag="93" translatesAutoresizingMaskIntoConstraints="NO" id="LSQ-ts-EbJ">
+                    <rect key="frame" x="259" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="R" bezelStyle="roundedRect" image="20141220124222999_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AUO-cf-aUH">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonAuto:" target="-2" id="sNT-Ch-2ku"/>
+                    </connections>
+                </button>
+                <button toolTip="Make Selected Segments Lines" verticalHuggingPriority="750" fixedFrame="YES" tag="106" translatesAutoresizingMaskIntoConstraints="NO" id="efY-cR-6fx">
+                    <rect key="frame" x="290" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="f" bezelStyle="roundedRect" image="20141220124632153_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="evN-XI-oiW">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonToLine:" target="-2" id="NMu-Kx-dDV"/>
+                    </connections>
+                </button>
+                <button toolTip="Make Selected Segments Curves" verticalHuggingPriority="750" fixedFrame="YES" tag="94" translatesAutoresizingMaskIntoConstraints="NO" id="oEq-lV-ebM">
+                    <rect key="frame" x="317" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="L" bezelStyle="roundedRect" image="2014122011343280_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kzs-OM-bf2">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonToCureve:" target="-2" id="uCU-yd-vsi"/>
+                    </connections>
+                </button>
+                <button toolTip="Convert Selected Object to Path" verticalHuggingPriority="750" fixedFrame="YES" tag="101" translatesAutoresizingMaskIntoConstraints="NO" id="mps-7V-88D">
+                    <rect key="frame" x="347" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="l" bezelStyle="roundedRect" image="20141220113426674_easyicon_net_512" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7Wp-U8-hET">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="rmh-BL-5MF"/>
+                    </connections>
+                </button>
+                <button toolTip="Convert Selected Objects' Stroke to Path" verticalHuggingPriority="750" fixedFrame="YES" tag="77" translatesAutoresizingMaskIntoConstraints="NO" id="MuK-cv-ybx">
+                    <rect key="frame" x="373" y="5" width="26" height="17"/>
+                    <buttonCell key="cell" type="roundRect" title="R" bezelStyle="roundedRect" image="20141220122807605_easyicon_net_128" imagePosition="only" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="l7u-s1-Z04">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="performVerb:" target="-1" id="OhF-VX-JzT"/>
+                    </connections>
+                </button>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kAY-px-okp">
+                    <rect key="frame" x="571" y="4" width="45" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectAny" id="raV-Cr-ynC">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Show Clipping Path Of Selected Object" image="20141220124104630_easyicon_net_128" width="19"/>
+                            <segment toolTip="Show Mask Of Selected Object" image="20141220124024438_easyicon_net_128" width="19" selected="YES" tag="1"/>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didSegmentToggled:" target="-2" id="8pf-ko-Euw"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FUh-M6-UpB">
+                    <rect key="frame" x="616" y="4" width="64" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectAny" id="aWV-vQ-S7R">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Show Transformation Handles Of Selected Nodes" image="20141220124458106_easyicon_net_128" width="19"/>
+                            <segment toolTip="Show Bezier Handles Of Selected Nodes" image="20141220123928628_easyicon_net_128" width="19" selected="YES" tag="1"/>
+                            <segment toolTip="Show Path Outline" image="2014122012445547_easyicon_net_128" width="18">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didSegmentToggled:" target="-2" id="bM5-Aw-uIN"/>
+                    </connections>
+                </segmentedControl>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pps-4k-VH2">
+                    <rect key="frame" x="405" y="6" width="13" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="X" id="tZb-ZE-U1g">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField toolTip="X Coordinate Of Selected Nodes" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X4p-BU-Mjz">
+                    <rect key="frame" x="420" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="K05-23-LPn">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="4PC-fl-4Kg">
+                            <real key="minimum" value="-1000000"/>
+                            <real key="maximum" value="1000000"/>
+                            <metadata>
+                                <real key="inspectorSampleValue" value="2.0931999999999999"/>
+                            </metadata>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didCoordValueChanged:" target="-2" id="QPH-uA-bhx"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOv-Yk-6f9">
+                    <rect key="frame" x="472" y="6" width="13" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Y" id="dFx-mA-Gcp">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField toolTip="Y Coordinate Of Selected Nodes" verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="F5X-0B-s4L">
+                    <rect key="frame" x="487" y="4" width="50" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="0" drawsBackground="YES" id="Tuv-Gq-btg">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="Nrh-cI-QG1">
+                            <real key="minimum" value="-1000000"/>
+                            <real key="maximum" value="1000000"/>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="didCoordValueChanged:" target="-2" id="BFa-Jw-B1g"/>
+                    </connections>
+                </textField>
+                <button toolTip="Show Next Editable Path Effect Parameter" verticalHuggingPriority="750" fixedFrame="YES" tag="77" translatesAutoresizingMaskIntoConstraints="NO" id="29Y-jf-nHv">
+                    <rect key="frame" x="540" y="-1" width="34" height="28"/>
+                    <buttonCell key="cell" type="push" title="R" bezelStyle="rounded" alignment="center" controlSize="small" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6B7-rQ-em0">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES" changeBackground="YES" changeGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="didButtonNextLPEparam:" target="-2" id="gKq-fZ-2ED"/>
+                    </connections>
+                </button>
+            </subviews>
+            <point key="canvasLocation" x="354.5" y="271"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="20141220112957473_easyicon_net_285" width="285" height="285"/>
+        <image name="20141220113426674_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="2014122011343280_easyicon_net_512" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="20141220122807605_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220123756858_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220123928628_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124024438_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124104630_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124130899_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124204715_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124208388_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124222999_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124238241_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124244924_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124301402_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124308845_easyicon_net_128" width="128" height="128"/>
+        <image name="2014122012445547_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124458106_easyicon_net_128" width="128" height="128"/>
+        <image name="20141220124632153_easyicon_net_128" width="128" height="128"/>
+    </resources>
+</document>

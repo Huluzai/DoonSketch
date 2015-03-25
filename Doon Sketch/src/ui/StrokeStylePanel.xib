@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="StrokeStylePanel">
+            <connections>
+                <outlet property="inputMeterLimit" destination="bSM-n3-A31" id="pr5-DI-DhX"/>
+                <outlet property="inputOffset" destination="Ewm-Lb-OWS" id="PeU-Cg-I2i"/>
+                <outlet property="labelTitle" destination="5y0-2L-rHY" id="hIZ-0S-OQr"/>
+                <outlet property="popupDashes" destination="wM6-la-3bQ" id="2Hz-8V-SUD"/>
+                <outlet property="segmentCaps" destination="oSM-Jy-sNX" id="57d-Ks-kgR"/>
+                <outlet property="segmentJoins" destination="8rB-MT-eYY" id="sLa-e7-FTF"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY" customClass="BlockView">
+            <rect key="frame" x="0.0" y="0.0" width="217" height="186"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField toolTip="Stroke Width" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4L4-b9-ntL">
+                    <rect key="frame" x="104" y="147" width="95" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="7RM-Kx-Fxr">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="ThG-vw-aRk">
+                            <metadata>
+                                <real key="inspectorSampleValue" value="435.34334000000001"/>
+                            </metadata>
+                        </numberFormatter>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="strokeStyleScaleLine:" target="-2" id="Bab-Cf-DEz"/>
+                        <binding destination="-2" name="value" keyPath="self.width" id="MbP-yt-ILj"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GIZ-dh-ddE">
+                    <rect key="frame" x="7" y="150" width="90" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Width" id="78v-E0-pbe">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGw-ba-fLp">
+                    <rect key="frame" x="7" y="101" width="90" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Meter Limit" id="CB3-Ol-ilr">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MIG-q8-qA8">
+                    <rect key="frame" x="7" y="126" width="90" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Join" id="cQf-RJ-Z3z">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcn-iT-8fd">
+                    <rect key="frame" x="7" y="75" width="90" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Cap" id="yRV-18-xYp">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ml-JC-ZLG">
+                    <rect key="frame" x="7" y="48" width="90" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Dashs" id="ad6-k3-0sm">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8rB-MT-eYY">
+                    <rect key="frame" x="102" y="122" width="100" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="qiG-io-AHM">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Miter join" image="20141225074750933_easyicon_net_16" width="31"/>
+                            <segment toolTip="Round join" image="20141225074733109_easyicon_net_16" width="31" selected="YES" tag="1"/>
+                            <segment toolTip="Bevel join" image="20141225074725111_easyicon_net_16" width="30">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didStrokeStyleAnyToggled:" target="-2" id="F6F-kT-Cgn"/>
+                    </connections>
+                </segmentedControl>
+                <textField toolTip="Miter limit" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSM-n3-A31">
+                    <rect key="frame" x="104" y="99" width="96" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="L9Y-v8-oYE">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="aOh-Ip-khE"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="strokeStyleScaleLine:" target="-2" id="hoh-VB-Fdj"/>
+                        <binding destination="-2" name="value" keyPath="self.meterLimit" id="mGD-w8-CDB"/>
+                    </connections>
+                </textField>
+                <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oSM-Jy-sNX">
+                    <rect key="frame" x="102" y="71" width="100" height="20"/>
+                    <segmentedCell key="cell" controlSize="small" borderStyle="border" alignment="left" style="rounded" trackingMode="selectOne" id="ity-KT-Otk">
+                        <font key="font" metaFont="smallSystem"/>
+                        <segments>
+                            <segment toolTip="Butt Cap" image="20141225074927188_easyicon_net_16" width="31"/>
+                            <segment toolTip="Round Cap" image="20141225074856283_easyicon_net_16" width="31" selected="YES" tag="1"/>
+                            <segment toolTip="Square Cap" image="20141225074901578_easyicon_net_16" width="30">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="didStrokeStyleAnyToggled:" target="-2" id="bAh-Kr-VF6"/>
+                    </connections>
+                </segmentedControl>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZoI-br-shv">
+                    <rect key="frame" x="7" y="20" width="90" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Offset" id="ftc-8T-OHA">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField toolTip="Dash Offset" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewm-Lb-OWS">
+                    <rect key="frame" x="104" y="15" width="96" height="19"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="3as-nn-CoO">
+                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="2fh-O7-pL0"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="strokeStyleScaleLine:" target="-2" id="QGv-gV-88s"/>
+                        <binding destination="-2" name="value" keyPath="self.offset" id="m1W-oA-VKX"/>
+                    </connections>
+                </textField>
+                <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wM6-la-3bQ">
+                    <rect key="frame" x="101" y="41" width="102" height="22"/>
+                    <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" controlSize="small" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Yx9-0P-lID">
+                        <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystem"/>
+                        <menu key="menu" id="8U5-y4-rv8">
+                            <items>
+                                <menuItem title="0" id="3Sm-Us-ux4">
+                                    <modifierMask key="keyEquivalentModifierMask"/>
+                                </menuItem>
+                                <menuItem title="1" id="bzG-bi-jSl"/>
+                                <menuItem title="2" id="fjH-JA-o0s"/>
+                            </items>
+                        </menu>
+                    </popUpButtonCell>
+                    <connections>
+                        <action selector="strokeStyleScaleLine:" target="-2" id="yzm-nQ-7bc"/>
+                        <binding destination="-2" name="selectedIndex" keyPath="self.dashs" id="DTC-eQ-maa"/>
+                    </connections>
+                </popUpButton>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5y0-2L-rHY">
+                    <rect key="frame" x="2" y="170" width="213" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="HWX-O3-ebk">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <point key="canvasLocation" x="137.5" y="-44"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="XZ8-cb-omk"/>
+    </objects>
+    <resources>
+        <image name="20141225074725111_easyicon_net_16" width="16" height="16"/>
+        <image name="20141225074733109_easyicon_net_16" width="16" height="16"/>
+        <image name="20141225074750933_easyicon_net_16" width="16" height="16"/>
+        <image name="20141225074856283_easyicon_net_16" width="16" height="16"/>
+        <image name="20141225074901578_easyicon_net_16" width="16" height="16"/>
+        <image name="20141225074927188_easyicon_net_16" width="16" height="16"/>
+    </resources>
+</document>
